@@ -1,7 +1,9 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import ScrollToTopOnRouteChange from './components/ScrollToTopOnRouteChange'
+import Loading from './components/Loading'
 import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
@@ -9,9 +11,22 @@ import Contact from './pages/Contact'
 import Packages from './pages/Packages'
 import Application from './pages/Application'
 
-const App = () => {
+const AppContent = () => {
+    const [loading, setLoading] = useState(false);
+    const location = useLocation();
+
+    useEffect(() => {
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 1000); // Show loading for 1 second
+
+        return () => clearTimeout(timer);
+    }, [location.pathname]);
+
     return (
-        <Router>
+        <>
+            {loading && <Loading />}
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -22,6 +37,15 @@ const App = () => {
                 <Route path="/application" element={<Application />} />
             </Routes>
             <Footer />
+        </>
+    );
+}
+
+const App = () => {
+    return (
+        <Router>
+            <ScrollToTopOnRouteChange />
+            <AppContent />
         </Router>
     )
 }

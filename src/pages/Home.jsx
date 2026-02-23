@@ -1,8 +1,49 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import lottie from 'lottie-web'
 
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [introLoading, setIntroLoading] = useState(true);
+    const [animationData, setAnimationData] = useState(null);
+    const introContainerRef = useRef(null);
+
+    useEffect(() => {
+        // Load flight-ticket animation for intro
+        fetch('/flight-ticket.json')
+            .then(response => response.text())
+            .then(text => {
+                try {
+                    const data = JSON.parse(text);
+                    setAnimationData(data);
+                } catch (error) {
+                    console.error('Error parsing flight-ticket JSON:', error);
+                }
+            })
+            .catch(error => console.error('Error loading flight-ticket animation:', error));
+    }, []);
+
+    useEffect(() => {
+        if (animationData && introContainerRef.current) {
+            const animation = lottie.loadAnimation({
+                container: introContainerRef.current,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                animationData: animationData
+            });
+
+            // Hide intro loading after animation completes (approximately 3 seconds)
+            const timer = setTimeout(() => {
+                setIntroLoading(false);
+            }, 3000);
+
+            return () => {
+                animation.destroy();
+                clearTimeout(timer);
+            };
+        }
+    }, [animationData]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -13,6 +54,21 @@ const Home = () => {
 
     return (
         <div>
+            {/* Intro Loading Overlay */}
+            {introLoading && (
+                <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+                    <div className="flex flex-col items-center">
+                        <div 
+                            ref={introContainerRef} 
+                            className="w-48 h-48"
+                        />
+                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to Take-Off Holidays</p>
+                    </div>
+                </div>
+            )}
+            
+            {/* Main Content */}
+            <div style={{ display: introLoading ? 'none' : 'block' }}>
             {/* first section */}
             <section className="relative w-screen h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(/Home.jpg)'}}>
                 {/* Top 4 small glassmorphism boxes */}
@@ -545,6 +601,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     )
 }

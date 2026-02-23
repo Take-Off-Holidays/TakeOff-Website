@@ -83,25 +83,25 @@ const Navbar = () => {
         <div className="lg:hidden bg-white/20 backdrop-blur-lg border-t border-white/20 shadow-lg">
           <div className="container mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-6">
             <div className="flex flex-col space-y-2 sm:space-y-4">
-              <Link to="/" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
-              <Link to="/services" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/services" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Services
               </Link>
-              <Link to="/about" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/about" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 About Us
               </Link>
-              <Link to="/contact" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/contact" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Contact Us
               </Link>
-              <Link to="/packages" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <Link to="/packages" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Packages
               </Link>
               
               {/* Mobile Booking Button */}
               <div className="pt-2 sm:pt-4 border-t border-white/20">
-                <Link to="/application" className="w-full bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-4 py-3 flex items-center justify-center space-x-2 hover:bg-white/20 transition-all duration-300 shadow-lg">
+                <Link to="/application" className="w-full bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-4 py-3 flex items-center justify-center space-x-2 hover:bg-white/20 transition-all duration-300 shadow-lg" onClick={() => setIsMenuOpen(false)}>
                   <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                   </svg>
