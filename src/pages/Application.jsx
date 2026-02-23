@@ -1,0 +1,316 @@
+import React, { useState } from 'react'
+
+const Application = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        package: '',
+        nights: '',
+        hotelCategory: '',
+        adults: '',
+        children: '',
+        childAge: '',
+        remarks: '',
+        message: ''
+    });
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form submitted:', formData);
+        // Handle form submission here
+    };
+
+    return (
+        <section id="application" className="py-16 sm:py-20 md:py-28 bg-white">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-5xl mx-auto">
+                    <div className="text-center mb-8 sm:mb-12">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl text-black mb-2" style={{fontFamily: "'Abhaya Libre', serif"}}>Start Your Travel Application</h2>
+                        <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-3"></div>
+                        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{fontFamily: "'Afacad', sans-serif"}}>
+                           Fill out our quick application form and let our team handle the planning for a smooth and hassle-free travel experience.
+                        </p>
+                    </div>
+
+                    <div className="gap-8 lg:gap-12">
+                        {/* Contact Form */}
+                        <div className="bg-[#EFF9FF] rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-xl">
+                            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Your Name *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        placeholder="John Doe"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="email" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Email Address *
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        placeholder="john@example.com"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="phone" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Enter your phone number *
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        placeholder="+91 98765 43210"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="package" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Package *
+                                    </label>
+                                    <select
+                                        id="package"
+                                        name="package"
+                                        value={formData.package}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select a package type</option>
+                                        <option value="domestic">Domestic</option>
+                                        <option value="international">International</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="nights" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Total Nights *
+                                    </label>
+                                    <select
+                                        id="nights"
+                                        name="nights"
+                                        value={formData.nights}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                        <option value="">Select number of nights</option>
+                                        <option value="1">1 Night</option>
+                                        <option value="2">2 Nights</option>
+                                        <option value="3">3 Nights</option>
+                                        <option value="4">4 Nights</option>
+                                        <option value="5">5 Nights</option>
+                                        <option value="6">6 Nights</option>
+                                        <option value="7">7 Nights</option>
+                                        <option value="8">8 Nights</option>
+                                        <option value="9">9 Nights</option>
+                                        <option value="10">10 Nights</option>
+                                        <option value="11">11 Nights</option>
+                                        <option value="12">12 Nights</option>
+                                        <option value="13">13 Nights</option>
+                                        <option value="14">14 Nights</option>
+                                        <option value="15">15+ Nights</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Hotel Category *
+                                    </label>
+                                    <div className="space-y-2">
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="hotelCategory"
+                                                value="3-star"
+                                                checked={formData.hotelCategory === '3-star'}
+                                                onChange={handleChange}
+                                                required
+                                                className="mr-2 text-blue-600 focus:ring-blue-500"
+                                            />
+                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>3 Stars</span>
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="hotelCategory"
+                                                value="4-star"
+                                                checked={formData.hotelCategory === '4-star'}
+                                                onChange={handleChange}
+                                                required
+                                                className="mr-2 text-blue-600 focus:ring-blue-500"
+                                            />
+                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>4 Stars</span>
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="hotelCategory"
+                                                value="5-star"
+                                                checked={formData.hotelCategory === '5-star'}
+                                                onChange={handleChange}
+                                                required
+                                                className="mr-2 text-blue-600 focus:ring-blue-500"
+                                            />
+                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>5 Stars</span>
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="hotelCategory"
+                                                value="budget"
+                                                checked={formData.hotelCategory === 'budget'}
+                                                onChange={handleChange}
+                                                required
+                                                className="mr-2 text-blue-600 focus:ring-blue-500"
+                                            />
+                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>Budget</span>
+                                        </label>
+                                        <label className="flex items-center">
+                                            <input
+                                                type="radio"
+                                                name="hotelCategory"
+                                                value="other"
+                                                checked={formData.hotelCategory === 'other'}
+                                                onChange={handleChange}
+                                                required
+                                                className="mr-2 text-blue-600 focus:ring-blue-500"
+                                            />
+                                            <span className="text-gray-700 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>Other</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label htmlFor="adults" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                            Total Adults *
+                                        </label>
+                                        <input
+                                            type="number"
+                                            id="adults"
+                                            name="adults"
+                                            value={formData.adults}
+                                            onChange={handleChange}
+                                            required
+                                            min="1"
+                                            className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                            placeholder="0"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="children" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                            Total Children *
+                                        </label>
+                                        <input
+                                            type="number"
+                                            id="children"
+                                            name="children"
+                                            value={formData.children}
+                                            onChange={handleChange}
+                                            required
+                                            min="0"
+                                            className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                            placeholder="0"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="childAge" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Child Age *
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="childAge"
+                                        name="childAge"
+                                        value={formData.childAge}
+                                        onChange={handleChange}
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        placeholder="e.g., 5, 8, 12"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label htmlFor="remarks" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Remarks
+                                    </label>
+                                    <textarea
+                                        id="remarks"
+                                        name="remarks"
+                                        value={formData.remarks}
+                                        onChange={handleChange}
+                                        rows="3"
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                        placeholder="Any special requirements or preferences..."
+                                    ></textarea>
+                                </div>
+
+                                <div>
+                                    <label htmlFor="message" className="block text-gray-700 text-base sm:text-lg font-medium mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        Message *
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows="4"
+                                        className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                                        placeholder="Tell us more about your travel plans..."
+                                    ></textarea>
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="w-full bg-blue-600 text-white py-3 sm:py-4 px-6 rounded-lg text-base sm:text-lg font-semibold hover:bg-blue-700 transition duration-300 flex items-center justify-center"
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                >
+                                    Submit your Travel Request
+                                    <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17L17 7M17 7H7M17 7V17"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+
+                        {/* Separator */}
+                        <div className="w-full max-w-3xl h-0.5 bg-black mx-auto mt-14 mb-14"></div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Application
