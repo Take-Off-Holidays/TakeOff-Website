@@ -7,7 +7,7 @@ const Contact = () => {
             {/* Hero Image Box */}
             <section className="pt-24 pb-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28">
                 <div className="w-full">
-                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[600px] md:h-[900px] min-h-[400px] md:min-h-[500px] max-h-[600px] md:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
+                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[200px] sm:h-[400px] md:h-[900px] min-h-[200px] sm:min-h-[400px] md:min-h-[900px] max-h-[900px] sm:max-h-[400px] md:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
                     </div>
                 </div>
             </section>
