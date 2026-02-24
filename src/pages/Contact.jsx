@@ -1,13 +1,84 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Application from './Application'
 
 const Contact = () => {
+    const [typedText, setTypedText] = useState('');
+    const [isVisible, setIsVisible] = useState(false);
+    const [materialsVisible, setMaterialsVisible] = useState(false);
+    const fullText = "Have questions or planning your next trip? Our travel experts are here to help. Contact us for ticket bookings, holiday packages, visa assistance, and complete travel support. We're committed to providing quick responses and reliable service to make your journey smooth and stress-free.";
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const targetElement = document.getElementById('contact-description');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        const materialsObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setMaterialsVisible(true);
+                        materialsObserver.disconnect();
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const materialsElement = document.getElementById('contact-materials');
+        if (materialsElement) {
+            materialsObserver.observe(materialsElement);
+        }
+
+        return () => {
+            if (materialsElement) {
+                materialsObserver.unobserve(materialsElement);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        let currentIndex = 0;
+        const typingInterval = setInterval(() => {
+            if (currentIndex <= fullText.length) {
+                setTypedText(fullText.slice(0, currentIndex));
+                currentIndex++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 30);
+
+        return () => clearInterval(typingInterval);
+    }, [isVisible]);
+
     return (
         <div>
             {/* Hero Image Box */}
             <section className="pt-24 pb-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28">
                 <div className="w-full">
-                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[200px] sm:h-[400px] md:h-[900px] min-h-[200px] sm:min-h-[400px] md:min-h-[900px] max-h-[900px] sm:max-h-[400px] md:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
+                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[200px] sm:h-[400px] md:h-[600px] lg:h-[900px] min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[900px] max-h-[900px] sm:max-h-[400px] md:max-h-[600px] lg:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
                     </div>
                 </div>
             </section>
@@ -16,7 +87,7 @@ const Contact = () => {
             <Application />
 
             {/* Contact Information */}
-             <section className="py-12 sm:py-16 md:py-20 space-y-8 sm:space-y-12">
+             <section className="py-5 sm:py-5 md:py-5 space-y-8 sm:space-y-5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div>
                                     <h3 className="text-3xl sm:text-4xl md:text-5xl text-black mb-2 text-center" style={{fontFamily: "'Abhaya Libre', serif"}}>Contact Information</h3>
@@ -25,14 +96,19 @@ const Contact = () => {
 
                                 {/* Contact Description */}
                                 <div className="w-full mx-auto mb-12 sm:mb-16 md:mb-24 px-4">
-                                    <p className="text-lg sm:text-xl md:text-2xl text-gray-600 text-center leading-relaxed max-w-4xl mx-auto" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        Have questions or planning your next trip? Our travel experts are here to help. Contact us for ticket bookings, holiday packages, visa assistance, and complete travel support. We're committed to providing quick responses and reliable service to make your journey smooth and stress-free.
+                                    <p id="contact-description" className="text-lg sm:text-xl md:text-2xl text-gray-600 text-center leading-relaxed max-w-4xl mx-auto" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                        {typedText}
+                                        <span className="inline-block w-1 h-6 bg-gray-600 ml-1 animate-pulse"></span>
                                     </p>
                                 </div>
 
                                 {/* Contact materials */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
-                                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div id="contact-materials" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 ${
+                                        materialsVisible 
+                                            ? 'opacity-100 transform scale-100' 
+                                            : 'opacity-0 transform scale-50'
+                                    }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
                                             <div className="bg-blue-100 text-blue-600 rounded-full p-2 sm:p-3 flex-shrink-0">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +127,11 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-100 ${
+                                        materialsVisible 
+                                            ? 'opacity-100 transform scale-100' 
+                                            : 'opacity-0 transform scale-50'
+                                    }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
                                             <div className="bg-green-100 text-green-600 rounded-full p-2 sm:p-3 flex-shrink-0">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +148,11 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-200 ${
+                                        materialsVisible 
+                                            ? 'opacity-100 transform scale-100' 
+                                            : 'opacity-0 transform scale-50'
+                                    }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
                                             <div className="bg-purple-100 text-purple-600 rounded-full p-2 sm:p-3 flex-shrink-0">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +169,11 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                    <div className={`bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-700 delay-300 ${
+                                        materialsVisible 
+                                            ? 'opacity-100 transform scale-100' 
+                                            : 'opacity-0 transform scale-50'
+                                    }`}>
                                         <div className="flex flex-col items-center text-center space-y-3">
                                             <div className="bg-orange-100 text-orange-600 rounded-full p-2 sm:p-3 flex-shrink-0">
                                                 <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
