@@ -142,9 +142,9 @@ const ServiceManager = () => {
 
     return (
         <div>
-            <section className="py-16 px-2 sm:px-8 md:px-16 lg:px-52 bg-gray-100">
-                <h2 className="text-3xl font-bold text-black mb-16 font-pethra">Services We Provide :</h2>
-                <div className="max-w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
+            <section className="py-16 px-4 sm:px-8 md:px-16 lg:px-52 bg-gray-100">
+                <h2 className="text-3xl font-bold text-black mb-16 font-pethra text-center">Services We Provide :</h2>
+                <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center">
                     {services.map((service, index) => (
                         <ServiceBox 
                             key={index}

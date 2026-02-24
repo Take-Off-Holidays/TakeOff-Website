@@ -1,17 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ServiceManager from '../components/ServiceManager';
 
 const Services = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsVisible(true);
+        }, 1300); // Start after 1 second loading + 300ms buffer
+        
+        return () => clearTimeout(timer);
+    }, []);
+    
     return (
         <div>
             {/* Hero Section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(/Service.webp)'}}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-2 sm:px-4">
-                    <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] text-center">
+                    <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] text-center transition-all duration-1000 ease-out ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}>
                         <h1 className="font-pethra mx-auto" style={{fontSize: 'clamp(2rem, 8vw, 120px)'}}>Our Services</h1>
                         <div className="w-[150px] sm:w-[200px] md:w-[300px] lg:w-[380px] h-[2px] bg-white mx-auto mt-4"></div>
                     </div>
-                    <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] text-center mt-4">
+                    <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] text-center mt-4 transition-all duration-1000 ease-out delay-300 ${
+                        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    }`}>
                         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed" style={{fontFamily: "'Afacad', sans-serif"}}>Complete travel services for smooth, stress-free journeys.</p>
                     </div>
                 </div>
@@ -20,7 +34,7 @@ const Services = () => {
             <ServiceManager />
 
             {/* Separator */}
-            <div className="w-full max-w-4xl lg:max-w-6xl h-0.5 bg-black mx-auto mt-12 lg:mt-20"></div>
+            <div className="w-full max-w-4xl lg:max-w-6xl h-0.5 bg-black mx-auto "></div>
             
             {/* Explore Our Packages Section */}
             <section className="py-12 sm:py-16 md:py-20 px-2 sm:px-8 md:px-16 lg:px-52 bg-gray-100 text-center">
