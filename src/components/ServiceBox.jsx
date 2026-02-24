@@ -1,8 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const ServiceBox = ({ icon, title, description }) => {
+    const [isCentered, setIsCentered] = useState(false);
+    const boxRef = useRef(null);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            if (boxRef.current) {
+                const rect = boxRef.current.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                const boxCenter = rect.top + rect.height / 2;
+                const viewportCenter = viewportHeight / 2;
+                
+                // Adjust threshold based on screen size
+                const isMobile = window.innerWidth < 768;
+                const threshold = isMobile ? 150 : 200;
+                
+                // Check if box center is within threshold of viewport center
+                const isNearCenter = Math.abs(boxCenter - viewportCenter) < threshold;
+                setIsCentered(isNearCenter);
+            }
+        };
+        
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        handleScroll(); // Check initial position
+        
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('resize', handleScroll);
+        };
+    }, []);
+    
     return (
-        <div className="bg-gradient-to-b from-[#8BD2FB] to-[#F3FAFF] rounded-3xl shadow-lg p-6 flex flex-col w-[22rem] h-48">
+        <div 
+            ref={boxRef}
+            className={`bg-gradient-to-b rounded-3xl shadow-lg p-6 flex flex-col w-full max-w-[22rem] h-48 transform transition-all duration-700 ease-out cursor-pointer relative overflow-hidden ${
+                isCentered 
+                    ? 'from-[#6BB6E8] to-[#E8F4FF] scale-102 md:scale-105 shadow-3xl z-20 -translate-y-2 ring-4 ring-blue-300 ring-opacity-50' 
+                    : 'from-[#8BD2FB] to-[#F3FAFF] scale-100 shadow-lg translate-y-0'
+            }`}
+        >
             <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     {title === "Kerala Special Packages" ? (
