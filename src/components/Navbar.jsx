@@ -33,22 +33,9 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Tablet Navigation - Compact version */}
-          <div className="hidden md:flex lg:hidden bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-4 py-2 shadow-lg">
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <Link to="/" className="text-sm sm:text-base text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
-                Home
-              </Link>
-              <Link to="/services" className="text-sm sm:text-base text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
-                Services
-              </Link>
-              <Link to="/about" className="text-sm sm:text-base text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
-                About
-              </Link>
-              <Link to="/contact" className="text-sm sm:text-base text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
-                Contact
-              </Link>
-            </div>
+          {/* Tablet Navigation - Hidden, only hamburger shown */}
+          <div className="hidden md:flex lg:hidden">
+            {/* Navigation links removed - only hamburger will be visible */}
           </div>
 
           {/* Right Section */}
@@ -66,14 +53,14 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Booking Button */}
-            <div className="hidden md:flex bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center space-x-1 sm:space-x-2 hover:bg-white/20 transition-all duration-300 shadow-lg">
+            <Link to="/application" className="hidden lg:flex bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 md:py-3 flex items-center space-x-1 sm:space-x-2 hover:bg-white/20 transition-all duration-300 shadow-lg">
               <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
               </svg>
               <span className="text-sm sm:text-base md:text-lg text-black font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
                 Booking
               </span>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

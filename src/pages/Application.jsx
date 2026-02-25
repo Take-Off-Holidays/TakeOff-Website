@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Application = () => {
     const [formData, setFormData] = useState({
@@ -14,6 +14,23 @@ const Application = () => {
         remarks: '',
         message: ''
     });
+
+    const [typedText, setTypedText] = useState('');
+    const fullText = "Fill out our quick application form and let our team handle the planning for a smooth and hassle-free travel experience.";
+
+    useEffect(() => {
+        let currentIndex = 0;
+        const typingInterval = setInterval(() => {
+            if (currentIndex <= fullText.length) {
+                setTypedText(fullText.slice(0, currentIndex));
+                currentIndex++;
+            } else {
+                clearInterval(typingInterval);
+            }
+        }, 30);
+
+        return () => clearInterval(typingInterval);
+    }, []);
 
     const handleChange = (e) => {
         setFormData({
@@ -36,7 +53,8 @@ const Application = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl text-black mb-2" style={{fontFamily: "'Abhaya Libre', serif"}}>Start Your Travel Application</h2>
                         <div className="w-16 sm:w-24 h-1 bg-blue-600 mx-auto mb-3"></div>
                         <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4" style={{fontFamily: "'Afacad', sans-serif"}}>
-                           Fill out our quick application form and let our team handle the planning for a smooth and hassle-free travel experience.
+                           {typedText}
+                           <span className="inline-block w-1 h-5 bg-gray-600 ml-1 animate-pulse"></span>
                         </p>
                     </div>
 
@@ -304,7 +322,7 @@ const Application = () => {
                         </div>
 
                         {/* Separator */}
-                        <div className="w-full max-w-3xl h-0.5 bg-black mx-auto mt-14 mb-14"></div>
+                        <div className="w-full max-w-3xl h-0.5 bg-black mx-auto mt-14 mb-2"></div>
 
                     </div>
                 </div>
