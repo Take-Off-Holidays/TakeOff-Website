@@ -135,8 +135,16 @@ const Home = () => {
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-80">
                             <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
-                                <button className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Explore Packages</button>
-                                <button className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" style={{fontFamily: "'Afacad', sans-serif"}}>Plan Your Trip</button>
+                                <button 
+                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/packages'}
+                                >Explore Packages</button>
+                                <button 
+                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" 
+                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                    onClick={() => window.location.href = '/contact'}
+                                >Plan Your Trip</button>
                             </div>
                         </div>
                     </div>
@@ -151,8 +159,16 @@ const Home = () => {
                 <div className="hidden md:block absolute bottom-8 right-32 md:right-34 lg:right-38 xl:right-44 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 md:p-6 lg:p-7 xl:p-8 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg">
                     <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-base md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                     <div className="flex gap-3 md:gap-3 lg:gap-4 xl:gap-5">
-                        <button className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Explore Packages</button>
-                        <button className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Plan Your Trip</button>
+                        <button 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
+                            style={{fontFamily: "'Afacad', sans-serif"}}
+                            onClick={() => window.location.href = '/packages'}
+                        >Explore Packages</button>
+                        <button 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
+                            style={{fontFamily: "'Afacad', sans-serif"}}
+                            onClick={() => window.location.href = '/contact'}
+                        >Plan Your Trip</button>
                     </div>
                 </div>
 
@@ -283,7 +299,12 @@ const Home = () => {
 
                         {/* Next Navigation Box */}
                         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center">
-                            <button className="text-gray-600 hover:text-blue-600 text-2xl md:text-3xl lg:text-4xl transition-all">&gt;</button>
+                            <button 
+                                className="text-gray-600 hover:text-blue-600 text-2xl md:text-3xl lg:text-4xl transition-all"
+                                onClick={() => window.location.href = '/packages'}
+                            >
+                                &gt;
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -426,16 +447,32 @@ const Home = () => {
                             
                             {/* Images and All Services Button */}
                             <div className="grid grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8">
-                                <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
+                                <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
                                     <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" />
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="text-center">
+                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                                Rent the best
+                                            </p>
+                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                                car for your ride
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
                                     <img src="/service2.jpg" alt="Airplane Wing" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" />
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="bg-white rounded-full p-3 sm:p-4 shadow-lg">
-                                            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-black transform rotate-[315deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7"/>
-                                            </svg>
+                                        <div className="text-center">
+                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                                Flight bookings
+                                            </p>
+                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                                made easy
+                                            </p>
+                                            <p className="text-white text-base sm:text-lg md:text-xl font-medium tracking-wide drop-shadow-lg mt-2" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                                with takeoff holidayz
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -449,45 +486,45 @@ const Home = () => {
                             
                             <div className="space-y-2 sm:space-y-6">
                                 {/* Service Card 1 */}
-                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4">
-                                    <div className="bg-blue-100 text-blue-600 rounded-full p-1 sm:p-3">
+                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <div className="bg-blue-100 text-blue-600 rounded-full p-1 sm:p-3 group-hover:bg-blue-200 transition-colors duration-300">
                                         <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
                                     </div>
-                                    <div>
-                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2">Flight Booking</h4>
+                                    <div className="flex-1">
+                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-blue-600 transition-colors duration-300">Flight Booking</h4>
                                         <p className="text-gray-600 text-xs sm:text-base">Affordable flights with flexible options.</p>
                                     </div>
                                 </div>
 
                                 {/* Service Card 2 */}
-                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4">
-                                    <div className="bg-green-100 text-green-600 rounded-full p-1 sm:p-3">
+                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <div className="bg-green-100 text-green-600 rounded-full p-1 sm:p-3 group-hover:bg-green-200 transition-colors duration-300">
                                         <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                                     </div>
-                                    <div>
-                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2">Rail & Bus Tickets</h4>
+                                    <div className="flex-1">
+                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-green-600 transition-colors duration-300">Rail & Bus Tickets</h4>
                                         <p className="text-gray-600 text-xs sm:text-base">Smooth domestic travel arrangements.</p>
                                     </div>
                                 </div>
 
                                 {/* Service Card 3 */}
-                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4">
-                                    <div className="bg-purple-100 text-purple-600 rounded-full p-1 sm:p-3">
+                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <div className="bg-purple-100 text-purple-600 rounded-full p-1 sm:p-3 group-hover:bg-purple-200 transition-colors duration-300">
                                         <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h8m0 0v8m0-8l-8 8m8-8l8 8"/></svg>
                                     </div>
-                                    <div>
-                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2">Premium Transfers</h4>
+                                    <div className="flex-1">
+                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-purple-600 transition-colors duration-300">Premium Transfers</h4>
                                         <p className="text-gray-600 text-xs sm:text-base">Comfortable taxi and private transport.</p>
                                     </div>
                                 </div>
 
                                 {/* Service Card 4 */}
-                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4">
-                                    <div className="bg-orange-100 text-orange-600 rounded-full p-1 sm:p-3">
+                                <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <div className="bg-orange-100 text-orange-600 rounded-full p-1 sm:p-3 group-hover:bg-orange-200 transition-colors duration-300">
                                         <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                                     </div>
-                                    <div>
-                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2">Hotel Reservations</h4>
+                                    <div className="flex-1">
+                                        <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-orange-600 transition-colors duration-300">Hotel Reservations</h4>
                                         <p className="text-gray-600 text-xs sm:text-base">Best accommodations for your stay.</p>
                                     </div>
                                 </div>
@@ -546,7 +583,11 @@ const Home = () => {
                                     <p className="text-gray-700 text-sm sm:text-base">Expert travel consultation</p>
                                 </div>
                             </div>
-                            <button className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 transition-all duration-300 rounded-full shadow-lg" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            <button 
+                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 transition-all duration-300 rounded-full shadow-lg" 
+                                style={{fontFamily: "'Afacad', sans-serif"}}
+                                onClick={() => window.location.href = '/contact'}
+                            >
                                 Customize My Trip
                             </button>
                         </div>
@@ -577,22 +618,30 @@ const Home = () => {
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                                 {/* Left Contact Box */}
-                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg">
-                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl">Contact Us</h3>
+                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Get expert advice for your next journey
                                     </p>
-                                    <button className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                    <button 
+                                        className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform" 
+                                        style={{fontFamily: "'Afacad', sans-serif"}}
+                                        onClick={() => window.location.href = '/contact'}
+                                    >
                                        Click to Contact Us
                                     </button>
                                 </div>
                                 {/* Right Contact Box */}
-                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg">
-                                    <h3 className="text-3xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl">Customise Trips and Claer the Doubts</h3>
+                                <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
+                                    <h3 className="text-3xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-green-600 transition-colors duration-300">Customise Trips and Clear the Doubts</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Start planning your dream vacation
                                     </p>
-                                    <button className="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-green-700 transition-all duration-300 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                    <button 
+                                        className="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-green-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform" 
+                                        style={{fontFamily: "'Afacad', sans-serif"}}
+                                        onClick={() => window.location.href = '/contact'}
+                                    >
                                         Get Free Consultation
                                     </button>
                                 </div>
