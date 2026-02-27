@@ -519,9 +519,9 @@ const Home = () => {
                         </div>
 
                         {/* Next Navigation Box */}
-                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center">
+                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                             <button 
-                                className="text-gray-600 hover:text-blue-600 text-2xl md:text-3xl lg:text-4xl transition-all"
+                                className="text-gray-600 group-hover:text-blue-600 hover:scale-110 text-2xl md:text-3xl lg:text-4xl transition-all duration-300"
                                 onClick={() => window.location.href = '/packages'}
                             >
                                 &gt;
@@ -845,7 +845,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <button 
-                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 transition-all duration-300 rounded-full shadow-lg" 
+                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl" 
                                 style={{fontFamily: "'Afacad', sans-serif"}}
                                 onClick={() => window.location.href = '/application'}
                             >
@@ -888,7 +888,7 @@ const Home = () => {
                                         ? 'opacity-100 translate-x-0' 
                                         : 'opacity-0 -translate-x-16'
                                 }`}>
-                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Get expert advice for your next journey
                                     </p>
