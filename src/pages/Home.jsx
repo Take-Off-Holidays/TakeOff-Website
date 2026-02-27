@@ -876,8 +876,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-y-0' 
                                 : 'opacity-0 translate-y-16'
                         }`}>
-                            <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Ready for Your Next Adventure?</h2>
-                            <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44"></div>
+                            <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">Ready for Your Next Adventure?</h2>
+                            <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44 mx-auto"></div>
                             <p className="text-gray-600 mb-8 sm:mb-10 md:mb-12 text-base sm:text-lg md:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>
                                 Let our travel experts design your perfect holiday today.
                             </p>
