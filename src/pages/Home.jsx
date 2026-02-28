@@ -4,7 +4,6 @@ import lottie from 'lottie-web'
 const Home = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [introLoading, setIntroLoading] = useState(true);
     const [animationData, setAnimationData] = useState(null);
     const [boxesVisible, setBoxesVisible] = useState(false);
     const [mobileBoxesVisible, setMobileBoxesVisible] = useState(false);
@@ -12,50 +11,165 @@ const Home = () => {
     const [serviceBoxVisible, setServiceBoxVisible] = useState(false);
     const [customizationVisible, setCustomizationVisible] = useState(false);
     const [adventureVisible, setAdventureVisible] = useState(false);
-    const introContainerRef = useRef(null);
-
-    useEffect(() => {
-        // Load flight-ticket animation for intro
-        fetch('/flight-ticket.json')
-            .then(response => response.text())
-            .then(text => {
-                try {
-                    const data = JSON.parse(text);
-                    setAnimationData(data);
-                } catch (error) {
-                    console.error('Error parsing flight-ticket JSON:', error);
-                }
-            })
-            .catch(error => console.error('Error loading flight-ticket animation:', error));
-    }, []);
-
-    useEffect(() => {
-        if (animationData && introContainerRef.current) {
-            const animation = lottie.loadAnimation({
-                container: introContainerRef.current,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                animationData: animationData
-            });
-
-            // Hide intro loading after animation completes (approximately 3 seconds)
-            const timer = setTimeout(() => {
-                setIntroLoading(false);
-            }, 3000);
-
-            return () => {
-                animation.destroy();
-                clearTimeout(timer);
-            };
-        }
-    }, [animationData]);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % 4);
         }, 1500);
         return () => clearInterval(interval);
+    }, []);
+
+    // Trigger mobile boxes animation
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setMobileBoxesVisible(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
+    // Intersection Observer for glassmorphism boxes
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setBoxesVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
+            }
+        );
+
+        const targetElement = document.getElementById('glassmorphism-boxes');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Tour Packages section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTourPackagesVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
+            }
+        );
+
+        const targetElement = document.getElementById('tour-packages-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Service Box section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setServiceBoxVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('service-box-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Customization section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setCustomizationVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('customization-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
+    }, []);
+
+    // Intersection Observer for Adventure section
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setAdventureVisible(true);
+                        observer.disconnect();
+                    }
+                });
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            }
+        );
+
+        const targetElement = document.getElementById('adventure-section');
+        if (targetElement) {
+            observer.observe(targetElement);
+        }
+
+        return () => {
+            if (targetElement) {
+                observer.unobserve(targetElement);
+            }
+        };
     }, []);
 
     useEffect(() => {
@@ -214,21 +328,6 @@ const Home = () => {
 
     return (
         <div>
-            {/* Intro Loading Overlay */}
-            {introLoading && (
-                <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-                    <div className="flex flex-col items-center">
-                        <div 
-                            ref={introContainerRef} 
-                            className="w-48 h-48"
-                        />
-                        <p className="mt-4 text-xl font-semibold text-gray-700">Welcome to TakeOff HolidayZ</p>
-                    </div>
-                </div>
-            )}
-            
-            {/* Main Content */}
-            <div style={{ display: introLoading ? 'none' : 'block' }}>
             {/* first section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.jpg)'}}>
                 {/* Top 4 small glassmorphism boxes */}
@@ -311,18 +410,18 @@ const Home = () => {
                     </div>
 
                     {/* Mobile bottom, top box */}
-                    <div className={`absolute top-[200px] sm:top-[330px] md:top-[370px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
+                    <div className={`absolute top-[230px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.2s' : '0s'}}>
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Your Perfect Journey Starts Here</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[580px] sm:top-[480px] md:top-[520px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 md:gap-8 mb-8 sm:mb-12 px-2 sm:px-4 transition-all duration-1000 ease-out delay-600 ${
+                    <div className={`absolute top-[70vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.4s' : '0s'}}>
+                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.7s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
                             <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
@@ -519,9 +618,9 @@ const Home = () => {
                         </div>
 
                         {/* Next Navigation Box */}
-                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center">
+                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                             <button 
-                                className="text-gray-600 hover:text-blue-600 text-2xl md:text-3xl lg:text-4xl transition-all"
+                                className="text-gray-600 group-hover:text-blue-600 hover:scale-110 text-2xl md:text-3xl lg:text-4xl transition-all duration-300"
                                 onClick={() => window.location.href = '/packages'}
                             >
                                 &gt;
@@ -845,7 +944,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <button 
-                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 transition-all duration-300 rounded-full shadow-lg" 
+                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl" 
                                 style={{fontFamily: "'Afacad', sans-serif"}}
                                 onClick={() => window.location.href = '/application'}
                             >
@@ -876,8 +975,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-y-0' 
                                 : 'opacity-0 translate-y-16'
                         }`}>
-                            <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Ready for Your Next Adventure?</h2>
-                            <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44"></div>
+                            <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">Ready for Your Next Adventure?</h2>
+                            <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44 mx-auto"></div>
                             <p className="text-gray-600 mb-8 sm:mb-10 md:mb-12 text-base sm:text-lg md:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>
                                 Let our travel experts design your perfect holiday today.
                             </p>
@@ -888,7 +987,7 @@ const Home = () => {
                                         ? 'opacity-100 translate-x-0' 
                                         : 'opacity-0 -translate-x-16'
                                 }`}>
-                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
                                     <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                         Get expert advice for your next journey
                                     </p>
@@ -923,7 +1022,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            </div>
         </div>
     )
 }

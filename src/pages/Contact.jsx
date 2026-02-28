@@ -78,7 +78,13 @@ const Contact = () => {
             {/* Hero Image Box */}
             <section className="pt-24 pb-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28">
                 <div className="w-full">
-                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[200px] sm:h-[400px] md:h-[600px] lg:h-[900px] min-h-[200px] sm:min-h-[400px] md:min-h-[600px] lg:min-h-[900px] max-h-[900px] sm:max-h-[400px] md:max-h-[600px] lg:max-h-[900px]" style={{backgroundImage: 'url(/contact.webp)'}}>
+                    <div className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden shadow-2xl relative h-[180px] sm:h-[350px] md:h-[500px] lg:h-[700px] min-h-[180px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[700px] max-h-[700px] sm:max-h-[350px] md:max-h-[500px] lg:max-h-[700px]" style={{backgroundImage: 'url(/contactus.jpg)'}}>
+                        <div className="absolute inset-0 bg-black/0 flex items-center justify-center px-4">
+                            <div className="absolute bg-black bg-opacity-20 backdrop-blur-md rounded-3xl p-4 sm:p-6 md:p-8 text-white max-w-7xl w-[90%] sm:w-[80%] md:w-[60%] text-center transition-all duration-1000 ease-out opacity-100 translate-y-0">
+                                <h1 className="font-pethra mx-auto" style={{fontSize: 'clamp(3rem, 10vw, 150px)'}}>Contact Us</h1>
+                                <div className="w-[200px] sm:w-[300px] md:w-[380px] h-[2px] bg-white mx-auto mt-0"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -119,9 +125,10 @@ const Contact = () => {
                                             <div>
                                                 <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Office Address</h4>
                                                 <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                    123 Travel Street<br />
-                                                    Kochi, Kerala 682001<br />
-                                                    India
+                                                    DD VYAPAR BHAVAN<br />
+                                                    KP VALLON ROAD<br />
+                                                    KADAVANTHARA, KOCHI - 682020<br />
+                                                    Kerala,India
                                                 </p>
                                             </div>
                                         </div>
@@ -141,8 +148,10 @@ const Contact = () => {
                                             <div>
                                                 <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Phone Numbers</h4>
                                                 <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                    +91 98765 43210<br />
-                                                    +91 87654 32109
+                                                    +91 812 902 3279 (WHATSAPP)<br />
+                                                    +91 977 878 3291<br />
+                                                    +91 859 078 3291<br />
+                                                    +91 484 351 2226
                                                 </p>
                                             </div>
                                         </div>
@@ -162,8 +171,7 @@ const Contact = () => {
                                             <div>
                                                 <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Email Address</h4>
                                                 <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                    info@takeoffholidayz.com<br />
-                                                    support@takeoffholidayz.com
+                                                    support.cok@takeoffholidayz.in<br />
                                                 </p>
                                             </div>
                                         </div>
@@ -184,8 +192,8 @@ const Contact = () => {
                                                 <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Business Hours</h4>
                                                 <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
                                                     Monday - Friday: 9:00 AM - 6:00 PM<br />
-                                                    Saturday: 9:00 AM - 2:00 PM<br />
-                                                    Sunday: Closed
+                                                    Saturday: 9:00 AM - 6:00 PM<br />
+                                                    Sunday: Closed ( Can contact through WhatsApp or Call)
                                                 </p>
                                             </div>
                                         </div>
@@ -193,10 +201,35 @@ const Contact = () => {
                                 </div>
                                 <div className="w-full mt-8 px-4 mb-12 sm:mb-16">
                                     <div className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg">
-                                        <div className="h-24 sm:h-32 flex items-center justify-center">
-                                            <p className="text-gray-400 text-center text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                                Additional content can be placed here
+                                        <div className="h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8414758398!2d76.267304514795!3d9.967375892915447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d5d0f88c5c5%3A0x0!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1234567890&output=embed&z=18&layer=t&maptype=satellite"
+                                                width="100%"
+                                                height="100%"
+                                                style={{border: 0}}
+                                                allowFullScreen=""
+                                                loading="lazy"
+                                                referrerPolicy="no-referrer-when-downgrade"
+                                                className="rounded-lg"
+                                                title="TakeOff Holidays Location - Kochi, Kerala (Satellite View)"
+                                            ></iframe>
+                                        </div>
+                                        <div className="mt-4 text-center">
+                                            <h4 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                Visit Our Office
+                                            </h4>
+                                            <p className="text-gray-600 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                                123 Travel Street, Kochi, Kerala 682001, India
                                             </p>
+                                            <a 
+                                                href="https://maps.app.goo.gl/e8Xq23jT8yuk9gtg9" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                className="inline-block mt-3 text-blue-600 hover:text-blue-700 font-medium text-sm sm:text-base underline"
+                                                style={{fontFamily: "'Afacad', sans-serif"}}
+                                            >
+                                                View on Google Maps →
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
