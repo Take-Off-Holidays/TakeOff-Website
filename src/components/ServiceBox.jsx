@@ -45,9 +45,21 @@ const ServiceBox = ({ icon, title, description }) => {
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     {title === "Kerala Special Packages" ? (
                       <img src="./kerala-tourism.svg" className="w-8 h-8 object-cover" alt="Kerala" />
-                    ) : title === "Motor Insurance" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
                     ) : title === "Corporate Travel & Events" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Destination Wedding" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Celebrity Eventz" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Cruise (Domestic & International)" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "School/College Tour" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Forex" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "International Sim" ? (
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                    ) : title === "Airport Assistance" ? (
                       <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
                     ) : (
                       <svg className="w-8 h-8" fill="url(#gradient)" viewBox={title === "Schengen Visa Services" ? "0 0 640 576" : title === "Visa Stamping Support" ? "0 0 129 129" : title === "Document Attestation" ? "0 0 32 32" : title === "Travel Insurance" ? "0 0 64 64" : title === "Health Insurance" ? "0 0 1024 1024" : "0 0 24 24"}>
