@@ -176,7 +176,7 @@ const Home = () => {
     return (
         <div>
             {/* first section */}
-            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.jpg)'}}>
+            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.webp)'}}>
                 {/* Top 4 small glassmorphism boxes */}
                 <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-8">
                     <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-32 md:gap-40 lg:gap-48 xl:gap-[48rem]">
