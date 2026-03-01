@@ -10,7 +10,7 @@ const Navbar = () => {
           {/* Left - Logo in glassmorphism box */}
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-1.5 sm:px-2 py-1 sm:py-1.5 shadow-lg flex items-center gap-2 sm:gap-3">
             <img src="/logoimg.png" alt="Logo" className="h-12 w-auto sm:h-14 md:h-12" />
-            <span className="text-black text-sm sm:text-base md:text-lg font-bold hidden sm:inline" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
+            <span className="text-black text-sm sm:text-base md:text-lg font-bold" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
           </div>
 
           {/* Center - Desktop Navigation Links in glassmorphism box */}
@@ -70,6 +70,13 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white/20 backdrop-blur-lg border-t border-white/20 shadow-lg">
           <div className="container mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-6">
+            {/* Mobile Logo */}
+            <div className="flex justify-center mb-4 sm:mb-6">
+              <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-2 py-1.5 shadow-lg flex items-center gap-2">
+                <img src="/logoimg.png" alt="Takeoff Holidayz" className="h-8 w-auto" />
+                <span className="text-black text-sm font-bold" style={{fontFamily: "'Afacad', sans-serif"}}>Takeoff Holidayz</span>
+              </div>
+            </div>
             <div className="flex flex-col space-y-2 sm:space-y-4">
               <Link to="/home" className="text-base sm:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/10" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)}>
                 Home
