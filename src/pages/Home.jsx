@@ -12,6 +12,7 @@ const Home = () => {
     const [serviceBoxVisible, setServiceBoxVisible] = useState(false);
     const [customizationVisible, setCustomizationVisible] = useState(false);
     const [adventureVisible, setAdventureVisible] = useState(false);
+    const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,6 +27,19 @@ const Home = () => {
             setMobileBoxesVisible(true);
         }, 100);
         return () => clearTimeout(timer);
+    }, []);
+
+    // Preload background image to prevent white blank areas
+    useEffect(() => {
+        const img = new Image();
+        img.src = '/Home.webp';
+        img.onload = () => {
+            setBackgroundImageLoaded(true);
+        };
+        img.onerror = () => {
+            // Fallback: set as loaded even on error to show content
+            setBackgroundImageLoaded(true);
+        };
     }, []);
 
     // Intersection Observer for glassmorphism boxes
@@ -176,7 +190,7 @@ const Home = () => {
     return (
         <div>
             {/* first section */}
-            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: 'url(/Home.webp)'}}>
+            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 {/* Top 4 small glassmorphism boxes */}
                 <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-8">
                     <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-32 md:gap-40 lg:gap-48 xl:gap-[48rem]">
@@ -224,7 +238,7 @@ const Home = () => {
                 {/* Mobile-only horizontal carousel */}
                 <div className="md:hidden absolute left-0 right-0 px-2 sm:px-4">
                     <div className="absolute top-[80px] sm:top-[100px] left-0 right-0 overflow-hidden">
-                        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(currentIndex % 4) * 100}%)` }}>
+                        <div className="flex transition-transform duration-500 ease-in-out will-change-transform" style={{ transform: `translateX(-${(currentIndex % 4) * 100}%)`, backfaceVisibility: 'hidden', perspective: 1000 }}>
                             {/* Box 1 */}
                             <div className="flex-shrink-0 w-full flex justify-center px-2">
                                 <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
