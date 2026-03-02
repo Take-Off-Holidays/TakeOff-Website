@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import DOMPurify from 'dompurify';
 
 const ServiceBox = ({ icon, title, description }) => {
     const [isCentered, setIsCentered] = useState(false);
@@ -46,23 +47,23 @@ const ServiceBox = ({ icon, title, description }) => {
                     {title === "Kerala Special Packages" ? (
                       <img src="./kerala-tourism.svg" className="w-8 h-8 object-cover" alt="Kerala" />
                     ) : title === "Corporate Travel & Events" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Destination Wedding" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Celebrity Eventz" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Cruise (Domestic & International)" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "School/College Tour" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Forex" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "International Sim" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Airport Assistance" ? (
-                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-8 h-8" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : title === "Helicopter Services" ? (
-                      <div className="w-12 h-12" dangerouslySetInnerHTML={{__html: icon}} />
+                      <div className="w-12 h-12" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(icon)}} />
                     ) : (
                       <svg className="w-8 h-8" fill="url(#gradient)" viewBox={title === "Schengen Visa Services" ? "0 0 640 576" : title === "Visa Stamping Support" ? "0 0 129 129" : title === "Document Attestation" ? "0 0 32 32" : title === "Travel Insurance" ? "0 0 64 64" : title === "Health Insurance" ? "0 0 1024 1024" : "0 0 24 24"}>
                         <defs>

@@ -30,28 +30,87 @@ const Application = () => {
         return () => clearInterval(typingInterval);
     }, []);
 
+    const [errors, setErrors] = useState({});
+
+    const validateForm = () => {
+        const newErrors = {};
+        const trimmedName = formData.name.trim();
+        const trimmedEmail = formData.email.trim();
+        const trimmedPhone = formData.phone.trim();
+        const trimmedMessage = formData.message.trim();
+
+        if (!trimmedName || trimmedName.length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!trimmedEmail || !emailRegex.test(trimmedEmail)) {
+            newErrors.email = 'Please enter a valid email address';
+        }
+
+        if (!formData.countryCode) {
+            newErrors.countryCode = 'Please select a country code';
+        }
+
+        if (!trimmedPhone || trimmedPhone.length < 7) {
+            newErrors.phone = 'Phone number must be at least 7 digits';
+        }
+
+        if (!formData.services) {
+            newErrors.services = 'Please select a service';
+        }
+
+        if (!trimmedMessage || trimmedMessage.length < 10) {
+            newErrors.message = 'Message must be at least 10 characters';
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
     const handleChange = (e) => {
+        const { name, value } = e.target;
+        const trimmedValue = name === 'name' || name === 'email' || name === 'phone' || name === 'message' || name === 'remarks' ? value.trimStart() : value;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: trimmedValue
         });
+
+        // Clear error when user starts typing
+        if (errors[name]) {
+            setErrors({
+                ...errors,
+                [name]: ''
+            });
+        }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!validateForm()) {
+            setIsSubmitting(false);
+            return;
+        }
         setIsSubmitting(true);
         setSubmitStatus('');
 
         try {
+            // Sanitize inputs
+            const sanitizedName = formData.name.trim();
+            const sanitizedEmail = formData.email.trim();
+            const sanitizedPhone = formData.phone.trim();
+            const sanitizedMessage = formData.message.trim();
+            const sanitizedRemarks = formData.remarks.trim();
+
             // Create WhatsApp message content
             const whatsappMessage = `*New Travel Application*
 
-*Name:* ${formData.name}
-*Email:* ${formData.email}
-*Phone:* ${formData.countryCode} ${formData.phone}
+*Name:* ${sanitizedName}
+*Email:* ${sanitizedEmail}
+*Phone:* ${formData.countryCode} ${sanitizedPhone}
 *Services:* ${formData.services}
-*Message:* ${formData.message}
-*Remarks:* ${formData.remarks}
+*Message:* ${sanitizedMessage}
+*Remarks:* ${sanitizedRemarks}
 
 *Submitted on:* ${new Date().toLocaleString()}`;
 
@@ -72,6 +131,7 @@ const Application = () => {
                     message: '',
                     remarks: ''
                 });
+                setErrors({});
                 setSubmitStatus('');
             }, 3000);
 
@@ -114,6 +174,7 @@ const Application = () => {
                                         className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                         placeholder="John Doe"
                                     />
+                                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                                 </div>
 
                                 <div>
@@ -130,6 +191,7 @@ const Application = () => {
                                         className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                         placeholder="john@example.com"
                                     />
+                                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                                 </div>
 
                                 <div>
@@ -171,6 +233,7 @@ const Application = () => {
                                             placeholder="98765 43210"
                                         />
                                     </div>
+                                    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                                 </div>
 
                                 <div>
@@ -199,6 +262,7 @@ const Application = () => {
                                         <option value="Stamping & Attestation">Stamping & Attestation</option>
                                         <option value="Others">Others</option>
                                     </select>
+                                    {errors.services && <p className="text-red-500 text-sm mt-1">{errors.services}</p>}
                                 </div>
 
                                 <div>
@@ -215,6 +279,7 @@ const Application = () => {
                                         className="w-full px-3 sm:px-4 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                                         placeholder="Tell us more about your travel plans..."
                                     ></textarea>
+                                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                                 </div>
 
                                 <div>
