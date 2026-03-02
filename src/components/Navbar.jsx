@@ -13,7 +13,10 @@ const Navbar = () => {
             <div className="flex flex-col leading-tight">
             <span 
             className="text-black text-sm sm:text-base md:text-lg font-bold"
-            style={{ fontFamily: "'Afacad', sans-serif" }}
+            style={{ 
+            fontFamily: "'Afacad', sans-serif",
+            color: "#148dc4"
+            }}
             >
              Takeoff Holidayz
             </span>
