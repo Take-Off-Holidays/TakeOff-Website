@@ -149,7 +149,7 @@ const About = () => {
                             imageVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                         }`}>
                             <div className="bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
-                                <img src="Welcome-to-Travel-Moments-Homepage.webp" alt="Airplane Wing" className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover" loading="lazy"/>
+                                <img src="ContactUs2.webp" alt="Airplane Wing" className="w-full h-[250px] sm:h-[300px] md:h-[400px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
