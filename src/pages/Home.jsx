@@ -309,8 +309,8 @@ const Home = () => {
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>- A Complete Travel partner</p>
+                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz</h1>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
                     </div>
                 </div>
 
