@@ -84,7 +84,7 @@ const Footer = () => {
                 </svg>
                 <div className="flex flex-col space-y-1">
                   <span className="text-gray-400 text-sm md:text-base break-words max-w-full overflow-wrap-break-word" style={{wordBreak: 'break-all'}}>support.cok@takeoffholidayz.in</span>
-                  <span className="text-gray-400 text-sm md:text-base break-words max-w-full overflow-wrap-break-word" style={{wordBreak: 'break-all'}}>support.cok@takeoffholidayz.in</span>
+                  <span className="text-gray-400 text-sm md:text-base break-words max-w-full overflow-wrap-break-word" style={{wordBreak: 'break-all'}}>sales@takeoffholidayz.in</span>
                 </div>
               </div>
             </div>
