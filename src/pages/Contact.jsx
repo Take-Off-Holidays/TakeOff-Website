@@ -204,6 +204,7 @@ const Contact = () => {
                                                 <h4 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg hover:text-purple-700 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>Email Address</h4>
                                                 <p className="text-gray-600 text-sm sm:text-base hover:text-gray-800 transition-colors duration-300" style={{fontFamily: "'Afacad', sans-serif"}}>
                                                     support.cok@takeoffholidayz.in<br />
+                                                    sales@takeoffholidayz.in
                                                 </p>
                                             </div>
                                         </div>
