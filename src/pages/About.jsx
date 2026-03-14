@@ -9,6 +9,7 @@ const About = () => {
     const [imageVisible, setImageVisible] = useState(false);
     const [journeyTextVisible, setJourneyTextVisible] = useState(false);
     const [founderNoteVisible, setFounderNoteVisible] = useState(false);
+    const [missionVisionVisible, setMissionVisionVisible] = useState(false);
     const [displayedText, setDisplayedText] = useState('');
     
     const whatWeDoRef = useRef(null);
@@ -17,6 +18,7 @@ const About = () => {
     const imageRef = useRef(null);
     const journeyRef = useRef(null);
     const founderNoteRef = useRef(null);
+    const missionVisionRef = useRef(null);
     
     const journeyText = "We turn every journey into a smooth, joyful experience — where comfort meets adventure and every trip becomes a story filled with beautiful memories.";
     
@@ -42,6 +44,8 @@ const About = () => {
                             setJourneyTextVisible(true);
                         } else if (entry.target === founderNoteRef.current) {
                             setFounderNoteVisible(true);
+                        } else if (entry.target === missionVisionRef.current) {
+                            setMissionVisionVisible(true);
                         }
                     }
                 });
@@ -70,6 +74,9 @@ const About = () => {
         if (founderNoteRef.current) {
             observer.observe(founderNoteRef.current);
         }
+        if (missionVisionRef.current) {
+            observer.observe(missionVisionRef.current);
+        }
         
         return () => {
             clearTimeout(timer);
@@ -79,6 +86,7 @@ const About = () => {
             if (imageRef.current) observer.unobserve(imageRef.current);
             if (journeyRef.current) observer.unobserve(journeyRef.current);
             if (founderNoteRef.current) observer.unobserve(founderNoteRef.current);
+            if (missionVisionRef.current) observer.unobserve(missionVisionRef.current);
         };
     }, []);
     
@@ -192,10 +200,46 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Separator */}
-            <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
+            {/* Mission & Vision Section */}
+            <section ref={missionVisionRef} className={`py-8 sm:py-8 md:py-8 bg-white transition-all duration-1000 ease-out ${
+                missionVisionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+            }`}>
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="grid grid-cols-1 gap-8 lg:gap-12 rounded-3xl border-2 border-black p-6 sm:p-8">
+                        {/* Mission */}
+                        <div>
+                            <div className="flex items-center mb-4">
+                                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black" style={{fontFamily: "'Abhaya Libre', serif"}}>Mission</h2>
+                            </div>
+                            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                We curate unique, socially responsible travel experiences that exceed expectations. Our dedicated team goes the extra mile to provide exceptional service, ensuring unforgettable journeys. Join us on a transformative adventure where exploration meets responsibility.
+                            </p>
+                        </div>
 
-            
+                        {/* Vision */}
+                        <div>
+                            <div className="flex items-center mb-4">
+                                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                        <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black" style={{fontFamily: "'Abhaya Libre', serif"}}>Vision</h2>
+                            </div>
+                            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                Our vision is to establish ourselves as the premier tourism company in the region, renowned for delivering exceptional, innovative, and socially responsible services. We are dedicated to providing unmatched quality, exceeding customer expectations, and setting new standards in the industry. With a commitment to creativity and competitiveness, we continuously strive to redefine travel experiences, offering unique and transformative journeys that captivate and inspire. Through our unwavering focus on social responsibility, we aim to make a positive impact on the destinations we serve, fostering sustainable tourism practices and leaving a lasting legacy. By consistently surpassing industry standards and embracing forward-thinking approaches, we aim to be the preferred choice for travelers seeking unparalleled travel experiences that are both enriching and responsible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Separator */}
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
 
@@ -283,7 +327,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="/founder.jpg" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
+                                <img src="IMG_3317.webp" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
