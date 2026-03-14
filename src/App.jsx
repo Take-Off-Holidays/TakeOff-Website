@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTopOnRouteChange from './components/ScrollToTopOnRouteChange'
@@ -54,6 +55,57 @@ const App = () => {
     return (
         <Router>
             <ScrollToTopOnRouteChange />
+            <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Organization",
+                        "name": "TakeOff Holidayz Pvt Ltd",
+                        "alternateName": "TakeOff Holidayz",
+                        "url": "https://takeoffholidayz.com",
+                        "logo": "https://takeoffholidayz.com/logoimg.png",
+                        "description": "Premium travel agency in Kerala offering customized holiday packages to Dubai, Maldives, Thailand, and international destinations.",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "DD Vyapar Bhavan, KP Vallon Road, Kadavanthra",
+                            "addressLocality": "Kochi",
+                            "addressRegion": "Kerala",
+                            "postalCode": "682020",
+                            "addressCountry": "IN"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "9.9312",
+                            "longitude": "76.2673"
+                        },
+                        "telephone": "+91-8129023279",
+                        "email": "support.cok@takeoffholidayz.in",
+                        "sameAs": [
+                            "https://www.facebook.com/takeoffholidayz",
+                            "https://www.instagram.com/takeoffholidayz",
+                            "https://twitter.com/takeoffholidayz"
+                        ],
+                        "priceRange": "$$",
+                        "openingHours": "Mo-Su 00:00-23:59"
+                    })}
+                </script>
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "WebSite",
+                        "name": "TakeOff Holidayz",
+                        "url": "https://takeoffholidayz.com",
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": "https://takeoffholidayz.com/packages?search={search_term_string}"
+                            },
+                            "query-input": "required name=search_term_string"
+                        }
+                    })}
+                </script>
+            </Helmet>
             <AppContent />
         </Router>
     )

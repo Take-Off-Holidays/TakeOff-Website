@@ -15,7 +15,7 @@
     "lottie-web": "^5.13.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
@@ -34,5 +34,8 @@
   },
   "overrides": {
     "vite": "^8.0.0-beta.13"
+  },
+  "npm": {
+    "legacy-peer-deps": true
   }
 }

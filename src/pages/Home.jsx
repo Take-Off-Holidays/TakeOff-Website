@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import lottie from 'lottie-web'
 const CustomerReview = lazy(() => import('../components/CustomerReview'))
 
@@ -188,7 +190,18 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>TakeOff Holidayz - Premium Travel Agency | Best Holiday Packages Kerala, Dubai, Maldives</title>
+                <meta name="description" content="TakeOff Holidayz - Your trusted travel partner in Kerala. Explore premium holiday packages to Dubai, Maldives, Thailand, Kerala & more. Flight bookings, hotels, visa assistance. 19+ years of travel excellence. Book your dream vacation today!" />
+                <meta name="keywords" content="travel agency Kerala, holiday packages, Dubai tours, Maldives vacation, Thailand travel, Kerala backwaters, flight booking, hotel reservation, international tours, domestic packages, group tours, honeymoon packages, best travel agency Kochi" />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
+                <meta property="og:title" content="TakeOff Holidayz - Premium Travel Agency | Best Holiday Packages" />
+                <meta property="og:description" content="Your trusted travel partner in Kerala. Explore premium holiday packages to Dubai, Maldives, Thailand & more. 19+ years of travel excellence." />
+                <meta property="og:url" content="https://takeoffholidayz.com/home" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/home" />
+            </Helmet>
             {/* first section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 {/* Top 4 small glassmorphism boxes */}
@@ -951,7 +964,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </div>
+        </>
     )
 }
 export default Home

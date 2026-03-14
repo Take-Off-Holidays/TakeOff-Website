@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import ServiceManager from '../components/ServiceManager';
 
 const Services = () => {
@@ -13,7 +15,19 @@ const Services = () => {
     }, []);
     
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Travel Services - TakeOff Holidayz | Flight Booking, Hotels, Visa Assistance</title>
+                <meta name="description" content="TakeOff Holidayz offers comprehensive travel services including flight bookings, hotel reservations, visa assistance, travel insurance, car rentals, and customized holiday packages. Your complete travel solution in Kerala." />
+                <meta name="keywords" content="travel services, flight booking, hotel reservation, visa assistance, travel insurance, car rental, tour packages, cruise booking, ticket booking, travel agency services, Kerala travel services" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Travel Services - TakeOff Holidayz | Flight Booking, Hotels, Visa Assistance" />
+                <meta property="og:description" content="Comprehensive travel services including flight bookings, hotel reservations, visa assistance, and customized holiday packages." />
+                <meta property="og:url" content="https://takeoffholidayz.com/services" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/services" />
+            </Helmet>
+            <main>
             {/* Hero Section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(/Service.webp)'}}>
                 <div className="absolute inset-0 flex flex-col items-center justify-center px-2 sm:px-4">
@@ -47,7 +61,8 @@ const Services = () => {
                     </svg>
                 </button>
             </section>
-        </div>
+        </main>
+        </>
     );
 };
 

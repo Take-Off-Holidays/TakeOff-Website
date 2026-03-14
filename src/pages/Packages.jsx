@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import DomesticPackages from '../components/Domestic';
 import InternationalPackages from '../components/International';
 
@@ -104,7 +106,19 @@ const Packages = () => {
     })();
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Tour Packages - TakeOff Holidayz | Domestic & International Holiday Packages</title>
+                <meta name="description" content="Explore best tour packages at TakeOff Holidayz. We offer domestic packages (Kerala, Goa, Kashmir, Ladakh) and international packages (Dubai, Maldives, Thailand, Europe, Singapore, Bali). Best deals on customized holidays." />
+                <meta name="keywords" content="tour packages, holiday packages, domestic travel packages, international tour packages, Kerala packages, Dubai tours, Maldives vacation, Thailand travel, Goa holidays, Kashmir tourism, Ladakh trip, honeymoon packages, group tours, family vacation" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Tour Packages - TakeOff Holidayz | Domestic & International Holiday Packages" />
+                <meta property="og:description" content="Explore best domestic and international tour packages. Kerala, Dubai, Maldives, Thailand & more." />
+                <meta property="og:url" content="https://takeoffholidayz.com/packages" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/packages" />
+            </Helmet>
+            <main>
             {/* Hero Section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage: backgroundImageLoaded ? 'url(/packages.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 <div className="absolute inset-0 flex items-center justify-center px-2 sm:px-4">
@@ -233,7 +247,8 @@ const Packages = () => {
                     </div>
                 )}
             </section>
-        </div>
+        </main>
+        </>
     );
 };
 

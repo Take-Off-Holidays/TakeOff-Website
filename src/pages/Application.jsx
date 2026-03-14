@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import DOMPurify from 'dompurify'
 
 const Application = () => {
@@ -145,7 +146,20 @@ const Application = () => {
     };
 
     return (
-        <section id="application" className="py-16 sm:py-20 md:py-28 bg-white">
+        <>
+            <Helmet>
+                <title>Book Your Travel - TakeOff Holidayz | Travel Application Form</title>
+                <meta name="description" content="Book your dream vacation with TakeOff Holidayz. Fill out our travel application form for flight bookings, holiday packages, visa assistance, and more. Quick and easy booking process. Start your journey today!" />
+                <meta name="keywords" content="book travel, travel application, travel booking form, flight booking request, holiday package booking, visa assistance request, travel inquiry form, book tour package, travel consultation, travel request form" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Book Your Travel - TakeOff Holidayz | Travel Application Form" />
+                <meta property="og:description" content="Book your dream vacation with TakeOff Holidayz. Fill out our travel application form." />
+                <meta property="og:url" content="https://takeoffholidayz.com/application" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/application" />
+            </Helmet>
+            <main>
+            <section id="application" className="py-16 sm:py-20 md:py-28 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-8 sm:mb-12">
@@ -348,6 +362,8 @@ const Application = () => {
                 </div>
             </div>
         </section>
+        </main>
+        </>
     )
 }
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import Application from './Application'
 
 const Contact = () => {
@@ -74,7 +75,19 @@ const Contact = () => {
     }, [isVisible]);
 
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>Contact Us - TakeOff Holidayz | Get in Touch for Travel Inquiries</title>
+                <meta name="description" content="Contact TakeOff Holidayz for all your travel needs. Reach us at our Kochi, Kerala office or UK branch. Call +91 812 902 3279 or email support.cok@takeoffholidayz.in. We're available for flight bookings, holiday packages, and visa assistance." />
+                <meta name="keywords" content="contact travel agency, TakeOff Holidayz contact, travel agency Kochi, travel agency Kerala, flight booking contact, holiday packages inquiry, visa assistance contact, travel agency phone, travel agency email, travel agency address" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Contact Us - TakeOff Holidayz | Get in Touch for Travel Inquiries" />
+                <meta property="og:description" content="Contact TakeOff Holidayz for all your travel needs. Call +91 812 902 3279 or email support.cok@takeoffholidayz.in." />
+                <meta property="og:url" content="https://takeoffholidayz.com/contact" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/contact" />
+            </Helmet>
+            <main>
             {/* Hero Image Box */}
             <section className="pt-24 pb-12 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28">
                 <div className="w-full">
@@ -268,8 +281,8 @@ const Contact = () => {
                                 </div>
                             </div>
                             </section>
-
-        </div>
+        </main>
+        </>
     )
 }
 
