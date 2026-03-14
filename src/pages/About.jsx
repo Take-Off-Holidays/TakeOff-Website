@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const About = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -93,7 +94,19 @@ const About = () => {
     }, [journeyTextVisible, displayedText]);
     
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>About Us - TakeOff Holidayz | Trusted Travel Agency Since 2005</title>
+                <meta name="description" content="Learn about TakeOff Holidayz - a trusted travel agency with 19+ years of experience. We offer flight bookings, holiday packages, visa assistance, and personalized travel solutions across Kerala, Dubai, Maldives, Thailand and more." />
+                <meta name="keywords" content="about travel agency, TakeOff Holidayz history, travel company Kerala, experienced tour operators, travel experts, Kerala tourism, best travel agency Kochi, travel planning, holiday experts" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="About Us - TakeOff Holidayz | Trusted Travel Agency Since 2005" />
+                <meta property="og:description" content="Learn about TakeOff Holidayz - a trusted travel agency with 19+ years of experience offering premium travel services." />
+                <meta property="og:url" content="https://takeoffholidayz.com/about" />
+                <meta property="og:type" content="website" />
+                <link rel="canonical" href="https://takeoffholidayz.com/about" />
+            </Helmet>
+            <main>
             {/* Hero Section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat" style={{backgroundImage:'url(/about.webp)'}}>
                 <div className="absolute inset-0 bg-black/0 flex items-center justify-center px-4">
@@ -293,7 +306,8 @@ const About = () => {
                                     </p>
                                     <div className="mt-6">
                                         <p className="text-xl font-semibold text-gray-800">Founder & CEO</p>
-                                        <p className="text-gray-600">TakeOff Holidayz</p>
+                                        <p className="text-gray-600">Shibin Basheer</p>
+                                        <p className="text-gray-600">TakeOff Holidayz Pvt. Ltd.</p>
                                     </div>
                                 </div>
                             </div>
@@ -329,7 +343,8 @@ const About = () => {
             </section>
 
             
-        </div>
+        </main>
+        </>
     )
 }
 
