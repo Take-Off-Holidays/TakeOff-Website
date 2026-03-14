@@ -244,7 +244,7 @@ const Contact = () => {
                                                 loading="lazy"
                                                 referrerPolicy="no-referrer-when-downgrade"
                                                 className="rounded-lg"
-                                                title="TakeOff Holidays Location - Kochi, Kerala (Satellite View)"
+                                                title="TakeOff Holidayz Location - Kochi, Kerala (Satellite View)"
                                             ></iframe>
                                         </div>
                                         <div className="mt-4 text-center">

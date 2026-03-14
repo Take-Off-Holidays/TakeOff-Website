@@ -71,7 +71,7 @@ const CustomerReview = () => {
             initial: 'A',
             name: 'Afzal N',
             rating: 5,
-            comment: "The arrangement was nice.there were no delay as everything was perfect.and also it was worth as compared with direct contact with resort. Thankyou Take off holidays."
+            comment: "The arrangement was nice.there were no delay as everything was perfect.and also it was worth as compared with direct contact with resort. Thankyou Take off holiday."
         },
         {
             initial: 'S',
@@ -83,7 +83,7 @@ const CustomerReview = () => {
             initial: 'N',
             name: 'Navya James',
             rating: 5,
-            comment: "I took flight ticket service from them and it was great. Out of 3 agencies that i contacted Takeoff Holidays were the most efficient and so i proceeded with them. They will respond to your queries as quickly as possible."
+            comment: "I took flight ticket service from them and it was great. Out of 3 agencies that i contacted TakeOff Holidayz were the most efficient and so i proceeded with them. They will respond to your queries as quickly as possible."
         },
         {
             initial: 'V',
@@ -125,19 +125,19 @@ const CustomerReview = () => {
             initial: 'S',
             name: 'Sara Boban',
             rating: 5,
-            comment: "the service was smooth and stress free. I’m very satisfied and would definitely recommend Takeoff Holidays to anyone looking for reliable travel assistance."
+            comment: "the service was smooth and stress free. I’m very satisfied and would definitely recommend Takeoff Holidayz to anyone looking for reliable travel assistance."
         },
         {
             initial: 'L',
             name: 'lipin lg',
             rating: 5,
-            comment: "I had an amazing experience with Mr.Shibin at Takeoff Holidays.They crafted a perfect itinerary, handled all bookings seamlessly, and stayed in constant communication. Even a minor issue during the trip was resolved quickly and professionally. Their attention to detail and care made my vacation stress-free and unforgettable. Highly recommend for anyone seeking top-notch travel service!"
+            comment: "I had an amazing experience with Mr.Shibin at TakeOff Holidayz.They crafted a perfect itinerary, handled all bookings seamlessly, and stayed in constant communication. Even a minor issue during the trip was resolved quickly and professionally. Their attention to detail and care made my vacation stress-free and unforgettable. Highly recommend for anyone seeking top-notch travel service!"
         },
         {
             initial: 'S',
             name: 'Susanth alappatt john',
             rating: 5,
-            comment: "I used to book tickets through this agency and I’m so pleased with entire experience. From start to finish Mr. Shibin went above and beyond to ensure that every aspects of my trip was seamless and stress free. I highly recommend Take off holidays for anyone to book a trip."
+            comment: "I used to book tickets through this agency and I’m so pleased with entire experience. From start to finish Mr. Shibin went above and beyond to ensure that every aspects of my trip was seamless and stress free. I highly recommend TakeOff holidayz for anyone to book a trip."
         },
         {
             initial: 'P',

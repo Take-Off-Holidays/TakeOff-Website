@@ -270,7 +270,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="/founder.jpg" alt="Founder of TakeOff Holidays" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
+                                <img src="/founder.jpg" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
@@ -280,7 +280,7 @@ const About = () => {
                             <div>
                                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>Our Journey</h3>
                                 <p className="text-gray-600 text-lg leading-relaxed" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                    TakeOff Holidays has been a trusted name in the travel industry for over a decade, providing comprehensive travel solutions that cater to diverse needs. From flight bookings to complete holiday packages, we've helped thousands of travelers create unforgettable memories across domestic and international destinations.
+                                    TakeOff Holidayz has been a trusted name in the travel industry for over a decade, providing comprehensive travel solutions that cater to diverse needs. From flight bookings to complete holiday packages, we've helped thousands of travelers create unforgettable memories across domestic and international destinations.
                                 </p>
                             </div>
 
@@ -289,11 +289,11 @@ const About = () => {
                                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>A Message from Our Founder</h3>
                                 <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
                                     <p className="text-gray-700 text-lg leading-relaxed italic" style={{fontFamily: "'Afacad', sans-serif"}}>
-                                        "Travel is not just about reaching destinations; it's about the experiences that transform us. When I started TakeOff Holidays, my vision was simple: to make travel accessible, enjoyable, and memorable for everyone. Every journey we plan is a story waiting to unfold, and we're here to ensure each story is perfect."
+                                        "Travel is not just about reaching destinations; it's about the experiences that transform us. When I started TakeOff Holidayz, my vision was simple: to make travel accessible, enjoyable, and memorable for everyone. Every journey we plan is a story waiting to unfold, and we're here to ensure each story is perfect."
                                     </p>
                                     <div className="mt-6">
                                         <p className="text-xl font-semibold text-gray-800">Founder & CEO</p>
-                                        <p className="text-gray-600">TakeOff Holidays</p>
+                                        <p className="text-gray-600">TakeOff Holidayz</p>
                                     </div>
                                 </div>
                             </div>
