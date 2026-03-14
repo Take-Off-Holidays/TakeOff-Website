@@ -11,3 +11,17 @@
 .font-pethra {
   font-family: 'Pethra', sans-serif;
 }
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-slide-left {
+  animation: slideLeft 30s linear infinite;
+  width: fit-content;
+}

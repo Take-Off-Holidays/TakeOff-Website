@@ -95,8 +95,10 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="text-center mb-4">
             <div className="flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-4">
+                <img src="/kerala-gods-own-country.gif" alt="Kerala - God's Own Country" className="h-16 w-auto rounded-lg object-cover" />
                 <img src="/isomark.png" alt="Takeoff Holidayz Isomark" className="h-20 w-auto" />
+                <img src="/nidhi.jpeg" alt="Nidhi" className="h-16 w-auto rounded-lg object-cover" />
               </div>
               <span className="text-gray-400 text-xs" style={{fontFamily: "'Afacad', sans-serif"}}>ISO Certified 9001:2025</span>
             </div>

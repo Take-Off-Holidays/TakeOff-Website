@@ -200,8 +200,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
+                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                         </div>
                         {/* Box 2 - 15+ Global Destinations Covered (from right) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-300 ${
@@ -209,8 +209,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
+                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
+                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                         </div>
                     </div>
                     <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48">
@@ -220,8 +220,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
+                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
+                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
                         </div>
                         {/* Box 4 - 19+ Years of Travel Excellence (from right) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-450 ${
@@ -229,8 +229,8 @@ const Home = () => {
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                            <p className="text-sm md:text-base lg:text-lg xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                            <p className="text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
+                            <p className="text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
                         </div>
                     </div>
                 </div>
@@ -274,14 +274,13 @@ const Home = () => {
                     <div className={`absolute top-[230px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
-                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-80 sm:w-96 max-w-[95vw]">
-                            <p className="font-bold text-xl sm:text-2xl text-center" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz Pvt Ltd</p>
-                            <p className="text-sm sm:text-base text-center mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
+                        <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
+                            <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Your Perfect Journey Starts Here</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[65vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
+                    <div className={`absolute top-[70vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.7s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
@@ -303,15 +302,12 @@ const Home = () => {
                 </div>
 
                 {/* Bottom left glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
+                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-600 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 -translate-x-full'
                 }`}>
-                    <div className="text-center">
-                        <h1 className="mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TakeOff Holidayz Pvt Ltd</h1>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A Complete Travel partner</p>
-                    </div>
+                    <h1 className="font-pethra mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">TakeOff Holidayz - Your Perfect Journey Starts Here</h1>
                 </div>
 
                 {/* Bottom right glassmorphism box */}
@@ -320,7 +316,7 @@ const Home = () => {
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 translate-x-full'
                 }`}>
-                    <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                    <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-base md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                     <div className="flex gap-3 md:gap-3 lg:gap-4 xl:gap-5">
                         <button 
                             className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
@@ -825,6 +821,70 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            {/* Separator */}
+            <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
+
+            {/* Trusted Brands / Logo Carousel Section */}
+            <section className="py-16 bg-gray-50 overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 font-pethra">Our Trusted Partners</h2>
+                        <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            We collaborate with world-renowned travel brands and airlines to provide you with the best travel experiences.
+                        </p>
+                    </div>
+                    <div className="relative">
+                        <div className="flex animate-scroll gap-12 items-center">
+                            {[
+                                '/logo/5f96229f-ae88-4751-bd68-e597a19e5c8f.jpg',
+                                '/logo/2b103c21-d943-48b5-801e-57f99573eb2d.png',
+                                '/logo/f7de1a95-f545-4e2b-9616-cecda673f3b9.jpg',
+                                '/logo/fca9fbc1-6259-436d-8bc7-a0e698701bdb.png',
+                                '/logo/c49b4545-31af-44b3-83a0-c5da590bcc50.png',
+                                '/logo/dcaf06ae-8cfc-4006-a84e-5b2dd3231f84.jpg',
+                                '/logo/bda48e91-6d6b-40af-9c0d-3eea61c96696.png',
+                                '/logo/8ae75654-4ea5-4b78-bc12-59b489acfba6.png',
+                                '/logo/da62c2bd-91e6-48d1-b7c7-d1d974bfcc84.jpg',
+                                '/logo/71cb25ac-779a-40c4-9978-e1d44fd37fa7.png',
+                                '/logo/fe6d0de9-2ce6-437b-88a4-c79e010910a1.png',
+                                '/logo/c76dbf38-a409-45ca-a3ae-68823fd20ddb.jpg',
+                                '/logo/b5a8e50c-e66d-416c-b5b2-ac45d0efc84b.png',
+                                '/logo/3ffcbd27-b10f-4d14-9231-148147e777a9.png',
+                                '/logo/3f5fdeac-b269-48d2-855e-396600d2011c.jpg',
+                                '/logo/47a4b988-d619-4bd7-b0d0-f08b85e71ea6.png',
+                                '/logo/537209e2-e09f-494a-a98f-df7c1c24f663.jpg',
+                                '/logo/82cce29d-1be2-4095-bb00-389f4c9f6aab.jpg',
+                                '/logo/15c7da11-2ff4-4515-8c5d-7c7c30fdc374.png',
+                                '/logo/f44089ca-46e3-4f37-8186-5886bb5cd5fa.png',
+                                '/logo/8a234e14-10bf-444a-a222-6ca3d940e0e9.png',
+                                '/logo/215ad31e-dfd2-465d-ba3d-221973c1e6da.png'
+                            ].map((logo, index) => (
+                                <div key={index} className="flex-shrink-0 h-20 w-40 bg-white rounded-lg shadow-md flex items-center justify-center p-3">
+                                    <img 
+                                        src={logo} 
+                                        alt={`Partner ${index + 1}`} 
+                                        className="max-h-full max-w-full object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <style>{`
+                    @keyframes scroll {
+                        0% { transform: translateX(-50%); }
+                        100% { transform: translateX(0); }
+                    }
+                    .animate-scroll {
+                        animation: scroll 20s linear infinite;
+                        width: max-content;
+                    }
+                    .animate-scroll:hover {
+                        animation-play-state: paused;
+                    }
+                `}</style>
             </section>
 
             <div className="w-full max-w-4xl h-0.5 bg-black mx-auto"></div>
