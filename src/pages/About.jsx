@@ -128,6 +128,23 @@ const About = () => {
                 </div>
             </section>
 
+            {/* Company Description Section */}
+            <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="max-w-7xl mx-auto text-center">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>Get to Know Us</h2>
+                        <div className="w-44 h-1 bg-blue-600 mx-auto mb-6"></div>
+                        <p className="text-gray-700 text-lg sm:text-xl md:text-2xl mb-2 leading-relaxed font-semibold" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            TAKEOFF HOLIDAYZ PVT LTD is one of the leading Travel & Tourism agencies in Kerala, India. <br />
+                        </p>
+                        <p className="text-gray-700 text-lg sm:text-xl md:text-2xl leading-relaxed" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            The company is established in 2007 in Kochi, We assure you of hassle-free travel, with the best and cheapest flight tickets, hotel reservations, tour packages, houseboats, visit visas, cabs, luxury cabs, and travel insurance.
+                            Taking traveler needs into consideration Offers the best budget-saving deals for domestic and international destinations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* What We Do Section */}
             <section className="py-12 sm:py-16 md:py-20 bg-white">
                 <div className="container mx-auto px-4 sm:px-6">
@@ -327,7 +344,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="IMG_3317.webp" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
+                                <img src="founder.webp" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
                             </div>
                         </div>
 
