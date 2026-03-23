@@ -288,7 +288,7 @@ const Home = () => {
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-64 max-w-[85vw]">
-                            <p className="font-bold font-pethra text-xl sm:text-2xl text-center">TakeOff Holidayz</p>
+                            <p className="font-bold font-pethra text-xl sm:text-2xl text-center">TAKEOFF HOLIDAYZ</p>
                             <p className="font-bold font-pethra text-lg sm:text-xl text-center">TOH Pvt Ltd</p>
                             <p className="text-sm sm:text-base text-center mt-1" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                         </div>
@@ -323,7 +323,7 @@ const Home = () => {
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Take Off Holidayz</h1>
+                        <h1 className="font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">TAKEOFF HOLIDAYSZ/h1>
                         <p className="font-pethra text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                     </div>
