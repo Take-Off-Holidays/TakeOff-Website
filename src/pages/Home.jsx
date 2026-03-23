@@ -323,7 +323,7 @@ const Home = () => {
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">TAKEOFF HOLIDAYSZ </h1>
+                        <h1 className="font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">TAKEOFF HOLIDAYZ </h1>
                         <p className="font-pethra text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
                         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                     </div>
