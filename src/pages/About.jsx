@@ -344,7 +344,7 @@ const About = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <div className="bg-gray-100 rounded-2xl overflow-hidden shadow-xl">
-                                <img src="founder.webp" alt="Founder of TakeOff Holidayz" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" loading="lazy"/>
+                                <img src="founder.jpeg" alt="Founder of TakeOff Holidayz" className="w-full h-auto object-contain" loading="lazy"/>
                             </div>
                         </div>
 
