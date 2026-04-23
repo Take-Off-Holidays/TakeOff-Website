@@ -205,8 +205,8 @@ const Home = () => {
             {/* first section */}
             <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 {/* Top 4 small glassmorphism boxes */}
-                <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-8">
-                    <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-32 md:gap-40 lg:gap-48 xl:gap-[48rem]">
+                <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-screen-2xl mx-auto">
+                    <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32">
                         {/* Box 1 - 10,000+ Happy Travelers Served (from left) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 mr-24 md:mr-32 lg:mr-40 xl:mr-64 transition-all duration-1000 ease-out ${
                             boxesVisible 
@@ -226,7 +226,7 @@ const Home = () => {
                             <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                         </div>
                     </div>
-                    <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-24 md:gap-32 lg:gap-40 xl:gap-48">
+                    <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 2xl:gap-24">
                         {/* Box 3 - 500+ Holiday Packages Delivered (from left) */}
                         <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-150 ${
                             boxesVisible 
@@ -317,33 +317,33 @@ const Home = () => {
                 </div>
 
                 {/* Bottom left glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 left-20 md:left-8 lg:left-40 xl:left-48 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 md:p-4 lg:p-5 xl:p-6 text-white max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
+                <div className={`hidden md:block absolute bottom-8 left-8 md:left-10 lg:left-14 xl:left-20 2xl:left-28 mr-2 md:mr-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 md:p-4 lg:p-5 xl:p-6 text-white max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl">Take Off Holidayz</h1>
-                        <p className="font-pethra text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
+                        <h1 className="font-pethra text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Take Off Holidayz</h1>
+                        <p className="font-pethra text-xl md:text-2xl lg:text-3xl xl:text-4xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
+                        <p className="text-xs md:text-sm lg:text-base xl:text-lg mt-1 md:mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                     </div>
                 </div>
 
-                {/* Bottom right glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 right-20 md:right-8 lg:right-38 xl:right-44 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 md:p-6 lg:p-7 xl:p-8 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-750 ${
+{/* Bottom right glassmorphism box */}
+                <div className={`hidden md:block absolute bottom-8 right-8 md:right-10 lg:right-14 xl:right-20 2xl:right-28 ml-2 md:ml-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-750 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 translate-x-full'
                 }`}>
-                    <p className="mb-4 md:mb-4 lg:mb-5 xl:mb-6 text-base md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
-                    <div className="flex gap-3 md:gap-3 lg:gap-4 xl:gap-5">
+                    <p className="mb-2 md:mb-3 lg:mb-4 text-sm md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                    <div className="flex gap-2 md:gap-3 lg:gap-4">
                         <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-3 md:px-4 lg:px-5 py-2 md:py-3 rounded-md transition-all text-xs md:text-sm lg:text-base" 
                             style={{fontFamily: "'Afacad', sans-serif"}}
                             onClick={() => window.location.href = '/packages'}
                         >Explore Packages</button>
                         <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 md:px-4 lg:px-5 xl:px-6 py-3 rounded-md transition-all text-sm md:text-sm lg:text-base xl:text-lg" 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-3 md:px-4 lg:px-5 py-2 md:py-3 rounded-md transition-all text-xs md:text-sm lg:text-base" 
                             style={{fontFamily: "'Afacad', sans-serif"}}
                             onClick={() => window.location.href = '/contact'}
                         >Plan Your Trip</button>
@@ -353,7 +353,7 @@ const Home = () => {
                             </section>
 
             {/* Tour Packages Section */}
-            <section id="tour-packages-section" className="w-full lg:px-32 xl:px-40 2xl:px-56 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-16 overflow-x-hidden">
+            <section id="tour-packages-section" className="w-full lg:px-32 xl:px-40 2xl:px-56 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-16 overflow-x-hidden max-w-screen-2xl mx-auto">
                 {/* Header */}
                 <div className={`flex justify-between items-start mb-12 flex-col sm:flex-row transition-all duration-1000 ease-out delay-600 ${
                     tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
@@ -362,7 +362,7 @@ const Home = () => {
                         tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: tourPackagesVisible ? '0.3s' : '0s'}}>
                         <p className="text-base text-gray-500 mb-10 sm:mb-6 md:mb-8" style={{fontFamily: "'Afacad', sans-serif"}}>Tour Packages</p>
-                        <h2 className="lg:text-5xl xl:text-6xl font-bold text-black font-pethra text-3xl sm:text-4xl md:text-5xl">Explore Our Best<br/>Travel Packages</h2>
+                        <h2 className="lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-black font-pethra text-3xl sm:text-4xl md:text-5xl">Explore Our Best<br/>Travel Packages</h2>
                         <div className="w-24 h-1 bg-blue-600 mt-2 mx-auto"></div>
                     </div>
                     <p className={`text-gray-600 text-lg max-w-xs text-left sm:text-right text-sm sm:text-base md:text-lg transition-all duration-1000 ease-out delay-600 ${
@@ -374,7 +374,7 @@ const Home = () => {
                 <div className="hidden md:block flex flex-col md:flex-row items-center gap-4 md:gap-6 lg:gap-6 xl:gap-8">
                     <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-6 xl:gap-8">
                         {/* Kerala Card */}
-                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 0 || hoveredCard === null ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(0)}>
+                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 0 || hoveredCard === null ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(0)}>
                             <div className="relative">
                                 <img src="/kerala.webp" alt="Beautiful Kerala backwaters and houseboat experience in God's Own Country" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 0 || hoveredCard === null ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
@@ -405,7 +405,7 @@ const Home = () => {
                         </div>
 
                         {/* Maldives Card */}
-                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 1 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(1)}>
+                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 1 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(1)}>
                             <div className="relative">
                                 <img src="/maldives.webp" alt="Luxury Maldives overwater villas and pristine beaches in the Indian Ocean" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 1 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
@@ -436,7 +436,7 @@ const Home = () => {
                         </div>
 
                         {/* Dubai Card */}
-                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 2 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(2)}>
+                        <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 2 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(2)}>
                             <div className="relative">
                                 <img src="/dubai.webp" alt="Iconic Dubai skyline with Burj Khalifa and modern architecture in the UAE" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 2 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
@@ -467,7 +467,7 @@ const Home = () => {
                         </div>
 
                         {/* Thailand Card */}
-                        <div className={`hidden md:hidden lg:hidden xl:block bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-48 md:w-56 lg:w-64 xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
+                        <div className={`hidden md:hidden lg:block bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
                             <div className="relative">
                                 <img src="/thailand.webp" alt="Beautiful Thailand temples and tropical beaches in Southeast Asia" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
@@ -654,7 +654,7 @@ const Home = () => {
 
             {/* Service Cards Section */}
             <section className="py-20 bg-gray-50 py-12 sm:py-16 md:py-20 overflow-x-hidden">
-                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44">
+                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44 max-w-screen-2xl mx-auto">
                     <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 sm:gap-10 md:gap-12">
                         {/* Left Section - Travel Made Effortless Box */}
                         <div className="lg:w-1/2 w-full">
@@ -783,7 +783,7 @@ const Home = () => {
 
             {/* Customization Section */}
             <section id="customization-section" className="py-20 bg-white py-12 sm:py-16 md:py-20 overflow-x-hidden">
-                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44">
+                <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44 max-w-screen-2xl mx-auto">
                     <div className={`flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ease-out ${
                         customizationVisible 
                             ? 'opacity-100 translate-y-0' 
@@ -847,7 +847,7 @@ const Home = () => {
 
             {/* Trusted Brands / Logo Carousel Section */}
             <section className="py-16 bg-gray-50 overflow-hidden">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto px-4 max-w-screen-2xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 font-pethra">Our Trusted Partners</h2>
                         <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto" style={{fontFamily: "'Afacad', sans-serif"}}>
@@ -915,7 +915,7 @@ const Home = () => {
 
             {/* Adventure Section */}
             <section id="adventure-section" className="py-20 bg-white py-12 sm:py-16 md:py-20 overflow-x-hidden">
-                <div className="container mx-auto px-4 max-w-full lg:px-8 xl:px-12">
+                <div className="container mx-auto px-4 max-w-full lg:px-8 xl:px-12 max-w-screen-2xl mx-auto">
                     <div className="flex justify-center">
                         {/* Right Section - Content */}
                         <div className={`lg:w-3/4 text-center w-full max-w-4xl transition-all duration-1000 ease-out ${
