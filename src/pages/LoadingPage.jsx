@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import lottie from 'lottie-web';
 
-const LoadingPage = () => {
+const LoadingPage = ({ onComplete }) => {
     const introContainerRef = useRef(null);
     const [animationData, setAnimationData] = useState(null);
     const [introLoading, setIntroLoading] = useState(true);
@@ -40,8 +40,11 @@ const LoadingPage = () => {
             // Hide intro loading after animation completes (approximately 3 seconds)
             const timer = setTimeout(() => {
                 setIntroLoading(false);
-                // Redirect to home page after intro completes
-                window.location.href = '/home';
+                if (onComplete) {
+                    onComplete();
+                } else {
+                    window.location.href = '/';
+                }
             }, 3000);
 
             return () => {

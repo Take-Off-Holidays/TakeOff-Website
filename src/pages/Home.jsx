@@ -55,7 +55,7 @@ const Home = () => {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
             }
@@ -84,7 +84,7 @@ const Home = () => {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px' // Start when element is 100px into view
             }
@@ -113,7 +113,7 @@ const Home = () => {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px'
             }
@@ -142,7 +142,7 @@ const Home = () => {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px'
             }
@@ -171,7 +171,7 @@ const Home = () => {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.1,
                 rootMargin: '0px 0px -100px 0px'
             }
@@ -198,52 +198,48 @@ const Home = () => {
                 <meta name="robots" content="index, follow, max-image-preview:large" />
                 <meta property="og:title" content="TakeOff Holidayz - Premium Travel Agency | Best Holiday Packages" />
                 <meta property="og:description" content="Your trusted travel partner in Kerala. Explore premium holiday packages to Dubai, Maldives, Thailand & more. 19+ years of travel excellence." />
-                <meta property="og:url" content="https://takeoffholidayz.com/home" />
+                <meta property="og:url" content="https://takeoffholidayz.com/" />
                 <meta property="og:type" content="website" />
-                <link rel="canonical" href="https://takeoffholidayz.com/home" />
+                <link rel="canonical" href="https://takeoffholidayz.com/" />
             </Helmet>
             {/* first section */}
-            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
+            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] bg-cover bg-center bg-no-repeat overflow-hidden" style={{ backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
                 {/* Top 4 small glassmorphism boxes */}
                 <div id="glassmorphism-boxes" className="hidden lg:block absolute left-0 right-0 px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 max-w-screen-2xl mx-auto">
-                    <div className="absolute top-[280px] sm:top-[300px] md:top-[320px] lg:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
+                    <div className="absolute top-[220px] lg:top-[240px] xl:top-[260px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
                         {/* Box 1 - 10,000+ Happy Travelers Served (from left) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 mr-16 sm:mr-20 md:mr-24 lg:mr-32 xl:mr-40 transition-all duration-1000 ease-out ${
-                            boxesVisible 
-                                ? 'opacity-100 translate-x-0' 
-                                : 'opacity-0 -translate-x-full'
-                        }`}>
-                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 sm:p-4 md:p-5 text-white text-center w-32 sm:w-36 md:w-40 lg:w-48 xl:w-56 mr-16 sm:mr-20 md:mr-24 lg:mr-32 xl:mr-40 transition-all duration-1000 ease-out ${boxesVisible
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 -translate-x-full'
+                            }`}>
+                            <p className="text-xl sm:text-2xl lg:text-3xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>10,000+</p>
+                            <p className="text-[10px] sm:text-xs lg:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                         </div>
                         {/* Box 2 - 15+ Global Destinations Covered (from right) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-300 ${
-                            boxesVisible 
-                                ? 'opacity-100 translate-x-0' 
-                                : 'opacity-0 translate-x-full'
-                        }`}>
-                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations</p>
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 sm:p-4 md:p-5 text-white text-center w-32 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-all duration-1000 ease-out delay-300 ${boxesVisible
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-full'
+                            }`}>
+                            <p className="text-xl sm:text-2xl lg:text-3xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>15+</p>
+                            <p className="text-[10px] sm:text-xs lg:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Global Destinations</p>
                         </div>
                     </div>
-                    <div className="absolute top-[140px] sm:top-[160px] md:top-[180px] lg:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+                    <div className="absolute top-[100px] lg:top-[120px] xl:top-[140px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                         {/* Box 3 - 500+ Holiday Packages Delivered (from left) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-150 ${
-                            boxesVisible 
-                                ? 'opacity-100 translate-x-0' 
-                                : 'opacity-0 -translate-x-full'
-                        }`}>
-                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages</p>
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 sm:p-4 md:p-5 text-white text-center w-32 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-all duration-1000 ease-out delay-150 ${boxesVisible
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 -translate-x-full'
+                            }`}>
+                            <p className="text-xl sm:text-2xl lg:text-3xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>500+</p>
+                            <p className="text-[10px] sm:text-xs lg:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages</p>
                         </div>
                         {/* Box 4 - 19+ Years of Travel Excellence (from right) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-450 ${
-                            boxesVisible 
-                                ? 'opacity-100 translate-x-0' 
-                                : 'opacity-0 translate-x-full'
-                        }`}>
-                            <p className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Excellence</p>
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 sm:p-4 md:p-5 text-white text-center w-32 sm:w-36 md:w-40 lg:w-48 xl:w-56 transition-all duration-1000 ease-out delay-450 ${boxesVisible
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-full'
+                            }`}>
+                            <p className="text-2xl sm:text-3xl lg:text-4xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>19+</p>
+                            <p className="text-[10px] sm:text-xs lg:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}> Years of Excellence</p>
                         </div>
                     </div>
                 </div>
@@ -255,60 +251,58 @@ const Home = () => {
                             {/* Box 1 */}
                             <div className="flex-shrink-0 w-full flex justify-center px-2">
                                 <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
-                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                                    <p className="text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>10,000+</p>
+                                    <p className="text-sm sm:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                                 </div>
                             </div>
                             {/* Box 2 */}
                             <div className="flex-shrink-0 w-full flex justify-center px-2">
                                 <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
-                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
+                                    <p className="text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>15+</p>
+                                    <p className="text-sm sm:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
                                 </div>
                             </div>
                             {/* Box 3 */}
                             <div className="flex-shrink-0 w-full flex justify-center px-2">
                                 <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
-                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
+                                    <p className="text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>500+</p>
+                                    <p className="text-sm sm:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
                                 </div>
                             </div>
                             {/* Box 4 */}
                             <div className="flex-shrink-0 w-full flex justify-center px-2">
                                 <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white text-center w-48 sm:w-56 max-w-[90vw]">
-                                    <p className="text-xl sm:text-2xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                                    <p className="text-sm sm:text-sm" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                                    <p className="text-xl sm:text-2xl font-bold" style={{ fontFamily: "'Abhaya Libre', serif", fontWeight: 800 }}>19+</p>
+                                    <p className="text-sm sm:text-sm" style={{ fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/* Mobile bottom, top box */}
-                    <div className={`absolute top-[230px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${
-                        mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
+                    <div className={`absolute top-[210px] sm:top-[200px] left-0 right-0 flex justify-center px-2 sm:px-4 transition-all duration-1000 ease-out delay-1000 ${mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                        }`} style={{ transitionDelay: mobileBoxesVisible ? '0.5s' : '0s' }}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-64 max-w-[85vw]">
                             <p className="font-bold font-futura text-xl sm:text-2xl text-center">TAKEOFF HOLIDAYZ</p>
                             <p className="font-bold font-futura text-lg sm:text-xl text-center">PVT LTD</p>
-                            <p className="text-sm sm:text-base text-center mt-1" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
+                            <p className="text-sm sm:text-base text-center mt-1" style={{ fontFamily: "'Playfair Display', serif" }}>A complete travel partner</p>
                         </div>
                     </div>
 
                     {/* Mobile bottom, bottom box */}
-                    <div className={`absolute top-[70vh] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${
-                        mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: mobileBoxesVisible ? '0.7s' : '0s'}}>
+                    <div className={`absolute top-[360px] sm:top-[340px] left-0 right-0 flex flex-col items-center gap-4 sm:gap-5 px-2 sm:px-4 transition-all duration-1000 ease-out delay-1200 ${mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                        }`} style={{ transitionDelay: mobileBoxesVisible ? '0.7s' : '0s' }}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-56 sm:w-64 max-w-[85vw]">
-                            <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                            <p className="mb-4 sm:mb-5 text-sm sm:text-base text-center" style={{ fontFamily: "'Afacad', sans-serif" }}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
                             <div className="flex flex-col gap-3">
-                                <button 
-                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/packages'}
                                 >Explore Packages</button>
-                                <button 
-                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 sm:px-5 py-3 rounded-md transition-all text-sm sm:text-base w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/contact'}
                                 >Plan Your Trip</button>
                             </div>
@@ -316,58 +310,56 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Bottom left glassmorphism box */}
-                <div className={`hidden lg:block absolute bottom-8 left-6 sm:left-8 md:left-10 lg:left-12 xl:left-16 2xl:left-20 mr-2 sm:mr-3 md:mr-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-2.5 sm:p-3 md:p-3.5 lg:p-4 xl:p-5 text-white max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
-                    boxesVisible 
-                        ? 'opacity-100 translate-x-0' 
-                        : 'opacity-0 -translate-x-full'
-                }`}>
-                    <div className="text-center">
-                        <h1 className="font-pethra text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl">Take Off Holidayz</h1>
-                        <p className="font-pethra text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
-                        <p className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg mt-0.5 sm:mt-1" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
+                {/* Centered Brand Name Box */}
+                <div className={`hidden lg:flex absolute top-[340px] lg:top-[380px] xl:top-[420px] left-0 right-0 justify-center transition-all duration-1000 ease-out delay-600 ${boxesVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-16'
+                    }`}>
+                    <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-2xl p-4 lg:p-6 xl:p-8 text-white text-center shadow-2xl border border-white border-opacity-20 max-w-xl xl:max-w-2xl transform hover:scale-105 transition-transform duration-500">
+                        <h1 className="font-bold font-futura text-2xl lg:text-3xl xl:text-4xl tracking-widest drop-shadow-2xl mb-1">TAKEOFF HOLIDAYZ</h1>
+                        <p className="font-bold font-futura text-lg lg:text-xl xl:text-2xl tracking-[0.2em] text-gray-200 drop-shadow-xl">PVT LTD</p>
+                        <div className="w-full max-w-[150px] h-px bg-gradient-to-r from-transparent via-white to-transparent my-2 mx-auto opacity-70"></div>
+                        <p className="text-[10px] lg:text-xs xl:text-sm font-light tracking-[0.15em] text-gray-100 uppercase" style={{ fontFamily: "'Playfair Display', serif" }}>A complete travel partner</p>
                     </div>
                 </div>
 
-                {/* Bottom right glassmorphism box */}
-                <div className={`hidden lg:block absolute bottom-8 right-6 sm:right-8 md:right-10 lg:right-12 xl:right-16 2xl:right-20 ml-2 sm:ml-3 md:ml-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-2.5 sm:p-3 md:p-3.5 lg:p-4 xl:p-5 text-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl transition-all duration-1000 ease-out delay-750 ${
-                    boxesVisible 
-                        ? 'opacity-100 translate-x-0' 
-                        : 'opacity-0 translate-x-full'
-                }`}>
-                    <p className="mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
-                    <div className="flex gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3">
-                        <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-2 sm:px-3 md:px-3.5 lg:px-4 py-1.5 sm:py-2 md:py-2.5 rounded-md transition-all text-xs sm:text-xs md:text-sm" 
-                            style={{fontFamily: "'Afacad', sans-serif"}}
-                            onClick={() => window.location.href = '/packages'}
-                        >Explore Packages</button>
-                        <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-2 sm:px-3 md:px-3.5 lg:px-4 py-1.5 sm:py-2 md:py-2.5 rounded-md transition-all text-xs sm:text-xs md:text-sm" 
-                            style={{fontFamily: "'Afacad', sans-serif"}}
-                            onClick={() => window.location.href = '/contact'}
-                        >Plan Your Trip</button>
+                {/* Desktop Discover Box (Centered Bottom) */}
+                <div className={`hidden lg:flex absolute top-[540px] lg:top-[580px] xl:top-[640px] left-0 right-0 justify-center transition-all duration-1000 ease-out delay-750 ${boxesVisible
+                    ? 'opacity-100 translate-y-0'
+                    : 'opacity-0 translate-y-16'
+                    }`}>
+                    <div className="bg-black bg-opacity-30 backdrop-blur-md rounded-2xl p-3 lg:p-4 text-white text-center shadow-xl border border-white border-opacity-20 max-w-xl lg:max-w-2xl">
+                        <p className="mb-3 text-xs lg:text-sm xl:text-base" style={{ fontFamily: "'Afacad', sans-serif" }}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                        <div className="flex justify-center gap-2 lg:gap-3">
+                            <button
+                                className="bg-white bg-opacity-30 hover:bg-opacity-40 px-4 py-2 rounded-md transition-all text-xs lg:text-sm font-medium"
+                                style={{ fontFamily: "'Afacad', sans-serif" }}
+                                onClick={() => window.location.href = '/packages'}
+                            >Explore Packages</button>
+                            <button
+                                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-all text-xs lg:text-sm font-medium shadow-lg"
+                                style={{ fontFamily: "'Afacad', sans-serif" }}
+                                onClick={() => window.location.href = '/contact'}
+                            >Plan Your Trip</button>
+                        </div>
                     </div>
                 </div>
 
-                            </section>
+            </section>
 
             {/* Tour Packages Section */}
             <section id="tour-packages-section" className="w-full lg:px-32 xl:px-40 2xl:px-56 min-h-screen bg-white py-16 px-4 sm:px-6 md:px-16 overflow-x-hidden max-w-screen-2xl mx-auto">
                 {/* Header */}
-                <div className={`flex justify-between items-start mb-12 flex-col sm:flex-row transition-all duration-1000 ease-out delay-600 ${
-                    tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                }`} style={{transitionDelay: tourPackagesVisible ? '0.2s' : '0s'}}>
-                    <div className={`mb-6 sm:mb-0 transition-all duration-1000 ease-out delay-600 ${
-                        tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{transitionDelay: tourPackagesVisible ? '0.3s' : '0s'}}>
-                        <p className="text-base text-gray-500 mb-10 sm:mb-6 md:mb-8" style={{fontFamily: "'Afacad', sans-serif"}}>Tour Packages</p>
-                        <h2 className="lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-black font-pethra text-3xl sm:text-4xl md:text-5xl">Explore Our Best<br/>Travel Packages</h2>
+                <div className={`flex justify-between items-start mb-12 flex-col sm:flex-row transition-all duration-1000 ease-out delay-600 ${tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                    }`} style={{ transitionDelay: tourPackagesVisible ? '0.2s' : '0s' }}>
+                    <div className={`mb-6 sm:mb-0 transition-all duration-1000 ease-out delay-600 ${tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                        }`} style={{ transitionDelay: tourPackagesVisible ? '0.3s' : '0s' }}>
+                        <p className="text-base text-gray-500 mb-10 sm:mb-6 md:mb-8" style={{ fontFamily: "'Afacad', sans-serif" }}>Tour Packages</p>
+                        <h2 className="lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-black font-pethra text-3xl sm:text-4xl md:text-5xl">Explore Our Best<br />Travel Packages</h2>
                         <div className="w-24 h-1 bg-blue-600 mt-2 mx-auto"></div>
                     </div>
-                    <p className={`text-gray-600 text-lg max-w-xs text-left sm:text-right text-sm sm:text-base md:text-lg transition-all duration-1000 ease-out delay-600 ${
-                        tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
-                    }`} style={{fontFamily: "'Afacad', sans-serif", transitionDelay: tourPackagesVisible ? '0.4s' : '0s'}}>Handpicked holiday experiences<br/>designed for comfort, adventure,<br/>and unforgettable memories.</p>
+                    <p className={`text-gray-600 text-lg max-w-xs text-left sm:text-right text-sm sm:text-base md:text-lg transition-all duration-1000 ease-out delay-600 ${tourPackagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+                        }`} style={{ fontFamily: "'Afacad', sans-serif", transitionDelay: tourPackagesVisible ? '0.4s' : '0s' }}>Handpicked holiday experiences<br />designed for comfort, adventure,<br />and unforgettable memories.</p>
                 </div>
 
                 {/* Cards Container - Desktop/Tablet */}
@@ -376,29 +368,29 @@ const Home = () => {
                         {/* Kerala Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 0 || hoveredCard === null ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(0)}>
                             <div className="relative">
-                                <img src="/kerala.webp" alt="Beautiful Kerala backwaters and houseboat experience in God's Own Country" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 0 || hoveredCard === null ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
+                                <img src="/kerala.webp" alt="Beautiful Kerala backwaters and houseboat experience in God's Own Country" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 0 || hoveredCard === null ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     South Asia
                                 </div>
                             </div>
                             <div className="p-8 pt-2">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Kerala</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Kerala</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹8,999</p>
-                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹8,999</p>
+                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Backwater cruises</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Spice plantation visits</li>
                                 </ul>
-                                <button 
-                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`} 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 0 || hoveredCard === null ? '' : 'hidden'}`}
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -407,29 +399,29 @@ const Home = () => {
                         {/* Maldives Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 1 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(1)}>
                             <div className="relative">
-                                <img src="/maldives.webp" alt="Luxury Maldives overwater villas and pristine beaches in the Indian Ocean" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 1 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
+                                <img src="/maldives.webp" alt="Luxury Maldives overwater villas and pristine beaches in the Indian Ocean" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 1 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Indian Ocean
                                 </div>
                             </div>
                             <div className="p-8 pt-2">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Maldives</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Maldives</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹22,000</p>
-                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 1 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹22,000</p>
+                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 1 ? '' : 'hidden'}`} style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Overwater villas</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Private beaches</li>
                                 </ul>
-                                <button 
-                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 1 ? '' : 'hidden'}`} 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 1 ? '' : 'hidden'}`}
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -438,29 +430,29 @@ const Home = () => {
                         {/* Dubai Card */}
                         <div className={`bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 2 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(2)}>
                             <div className="relative">
-                                <img src="/dubai.webp" alt="Iconic Dubai skyline with Burj Khalifa and modern architecture in the UAE" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 2 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
+                                <img src="/dubai.webp" alt="Iconic Dubai skyline with Burj Khalifa and modern architecture in the UAE" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 2 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Middle East
                                 </div>
                             </div>
                             <div className="p-8 pt-2">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Dubai</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Dubai</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
-                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 2 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹18,999</p>
+                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 2 ? '' : 'hidden'}`} style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Burj Khalifa experience</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Desert safari tours</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Luxury shopping malls</li>
                                 </ul>
-                                <button 
-                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 2 ? '' : 'hidden'}`} 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 2 ? '' : 'hidden'}`}
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -469,29 +461,29 @@ const Home = () => {
                         {/* Thailand Card */}
                         <div className={`hidden md:hidden lg:block bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ${hoveredCard === 3 ? 'md:w-[20rem] lg:w-[22rem] xl:w-[24rem] 2xl:w-[26rem]' : 'w-40 md:w-48 lg:w-56 xl:w-64 2xl:w-72'}`} onMouseEnter={() => setHoveredCard(3)}>
                             <div className="relative">
-                                <img src="/thailand.webp" alt="Beautiful Thailand temples and tropical beaches in Southeast Asia" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy"/>
+                                <img src="/thailand.webp" alt="Beautiful Thailand temples and tropical beaches in Southeast Asia" className={`object-cover rounded-2xl m-4 w-[calc(100%-2rem)] ${hoveredCard === 3 ? 'h-72 md:h-80 lg:h-96' : 'h-[24rem] md:h-[28rem] lg:h-[32rem]'}`} loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Southeast Asia
                                 </div>
                             </div>
                             <div className="p-8 pt-2">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-2xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Thailand</h3>
+                                    <h3 className="text-2xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Thailand</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-600 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{fontFamily: "'Abhaya Libre', serif"}}>₹14,999</p>
-                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 3 ? '' : 'hidden'}`} style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-2xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹14,999</p>
+                                <ul className={`space-y-2 text-base text-gray-600 mb-6 ${hoveredCard === 3 ? '' : 'hidden'}`} style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Island hopping</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Street food experiences</li>
                                 </ul>
-                                <button 
-                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 3 ? '' : 'hidden'}`} 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className={`bg-blue-600 text-white px-8 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl ${hoveredCard === 3 ? '' : 'hidden'}`}
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -499,7 +491,7 @@ const Home = () => {
 
                         {/* Next Navigation Box */}
                         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden w-24 md:w-32 lg:w-36 h-72 md:h-80 lg:h-96 flex items-center justify-center self-center hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer group">
-                            <button 
+                            <button
                                 className="text-gray-600 group-hover:text-blue-600 hover:scale-110 text-2xl md:text-3xl lg:text-4xl transition-all duration-300"
                                 onClick={() => window.location.href = '/packages'}
                             >
@@ -515,29 +507,29 @@ const Home = () => {
                         {/* Kerala Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/kerala.webp" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
+                                <img src="/kerala.webp" alt="Kerala" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     South Asia
                                 </div>
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Kerala</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Kerala</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹8,999</p>
-                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹8,999</p>
+                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Backwater cruises</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Ayurvedic treatments</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Spice plantation visits</li>
                                 </ul>
-                                <button 
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -546,29 +538,29 @@ const Home = () => {
                         {/* Maldives Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/maldives.webp" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
+                                <img src="/maldives.webp" alt="Maldives" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Indian Ocean
                                 </div>
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Maldives</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Maldives</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹22,000</p>
-                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹22,000</p>
+                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Overwater villas</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Water sports</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Private beaches</li>
                                 </ul>
-                                <button 
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -577,29 +569,29 @@ const Home = () => {
                         {/* Europe Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/dubai.webp" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
+                                <img src="/dubai.webp" alt="Europe" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Middle East
                                 </div>
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Dubai</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Dubai</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.5 6.5H19l-5.5 4 2 6.5L10 14l-5.5 4 2-6.5L1 7.5h6.5z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.5 6.5H19l-5.5 4 2 6.5L10 14l-5.5 4 2-6.5L1 7.5h6.5z" /></svg>
                                         <span className="text-gray-900 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹18,999</p>
-                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹18,999</p>
+                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Burj Khalifa experience</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Desert safari tours</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Luxury shopping malls</li>
                                 </ul>
-                                <button 
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -608,29 +600,29 @@ const Home = () => {
                         {/* Thailand Card */}
                         <div className="flex-shrink-0 w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                             <div className="relative">
-                                <img src="/thailand.webp" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy"/>
+                                <img src="/thailand.webp" alt="Thailand" className="object-cover rounded-2xl m-4 w-[calc(100%-2rem)] h-48" loading="lazy" />
                                 <div className="absolute top-8 left-8 bg-gray-800 bg-opacity-70 text-white px-3 py-1 rounded-full text-sm flex items-center gap-1">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
+                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                                     Southeast Asia
                                 </div>
                             </div>
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-3">
-                                    <h3 className="text-xl font-semibold text-gray-900" style={{fontFamily: "'Abhaya Libre', serif"}}>Thailand</h3>
+                                    <h3 className="text-xl font-semibold text-gray-900" style={{ fontFamily: "'Abhaya Libre', serif" }}>Thailand</h3>
                                     <div className="flex items-center gap-1 text-yellow-500">
-                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.5 6.5H19l-5.5 4 2 6.5L10 14l-5.5 4 2-6.5L1 7.5h6.5z"/></svg>
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1l2.5 6.5H19l-5.5 4 2 6.5L10 14l-5.5 4 2-6.5L1 7.5h6.5z" /></svg>
                                         <span className="text-gray-600 font-semibold text-lg">4.5</span>
                                     </div>
                                 </div>
-                                <p className="text-xl font-bold text-gray-900 mb-4" style={{fontFamily: "'Abhaya Libre', serif"}}>₹14,999</p>
-                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Abhaya Libre', serif" }}>₹14,999</p>
+                                <ul className="space-y-2 text-sm text-gray-600 mb-6" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Island hopping</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Temple visits</li>
                                     <li className="flex items-center gap-2"><span className="text-green-600">✓</span> Street food experiences</li>
                                 </ul>
-                                <button 
-                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full" 
-                                    style={{fontFamily: "'Afacad', sans-serif"}}
+                                <button
+                                    className="bg-blue-600 text-white px-6 py-3 rounded-full text-base hover:bg-blue-700 hover:scale-105 transition-all shadow-lg hover:shadow-xl w-full"
+                                    style={{ fontFamily: "'Afacad', sans-serif" }}
                                     onClick={() => window.location.href = '/application'}
                                 >Booking</button>
                             </div>
@@ -640,9 +632,9 @@ const Home = () => {
 
                 {/* Explore More Packages Button */}
                 <div className="md:hidden mt-12 flex justify-center">
-                    <button 
-                        className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 hover:scale-105 transition-all shadow-2xl" 
-                        style={{fontFamily: "'Afacad', sans-serif", boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)'}}
+                    <button
+                        className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 hover:scale-105 transition-all shadow-2xl"
+                        style={{ fontFamily: "'Afacad', sans-serif", boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)' }}
                         onClick={() => window.location.href = '/packages'}
                     >Click to Explore More Packages</button>
                 </div>
@@ -658,47 +650,45 @@ const Home = () => {
                     <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 sm:gap-10 md:gap-12">
                         {/* Left Section - Travel Made Effortless Box */}
                         <div className="lg:w-1/2 w-full">
-                            <div id="service-box-section" className={`bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 mb-8 lg:mb-8 transition-all duration-1000 ease-out ${
-                                serviceBoxVisible 
-                                    ? 'opacity-100 translate-y-0' 
-                                    : 'opacity-0 translate-y-16'
-                            }`}>
+                            <div id="service-box-section" className={`bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 mb-8 lg:mb-8 transition-all duration-1000 ease-out ${serviceBoxVisible
+                                ? 'opacity-100 translate-y-0'
+                                : 'opacity-0 translate-y-16'
+                                }`}>
                                 <h2 className="font-bold text-gray-800 font-pethra text-center lg:text-left text-4xl sm:text-4xl md:text-4xl">Travel Made Effortless</h2>
-                                <p className="text-lg text-gray-600 text-center lg:text-left text-base sm:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                <p className="text-lg text-gray-600 text-center lg:text-left text-base sm:text-lg" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                     From ticket bookings to luxury transfers, we handle every detail so you can focus on enjoying your journey.
                                 </p>
                             </div>
-                            
+
                             {/* Images and All Services Button */}
-                            <div className={`grid grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 transition-all duration-1000 ease-out delay-300 ${
-                                serviceBoxVisible 
-                                    ? 'opacity-100 translate-y-0' 
-                                    : 'opacity-0 translate-y-16'
-                            }`}>
+                            <div className={`grid grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 transition-all duration-1000 ease-out delay-300 ${serviceBoxVisible
+                                ? 'opacity-100 translate-y-0'
+                                : 'opacity-0 translate-y-16'
+                                }`}>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
-                                    <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy"/>
+                                    <img src="/service1.jpg" alt="Scenic Road" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy" />
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="text-center">
-                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{ fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                                                 Rent the best
                                             </p>
-                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{ fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                                                 car for your ride
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="bg-white rounded-3xl shadow-lg overflow-hidden relative">
-                                    <img src="/service2.jpg" alt="Airplane Wing" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy"/>
+                                    <img src="/service2.jpg" alt="Airplane Wing" className="w-full h-64 sm:h-80 md:h-[32rem] object-cover" loading="lazy" />
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="text-center">
-                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                            <p className="text-white text-lg sm:text-xl md:text-2xl font-light tracking-wide drop-shadow-lg" style={{ fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                                                 Flight bookings
                                             </p>
-                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                            <p className="text-white text-xl sm:text-2xl md:text-3xl font-bold tracking-wider drop-shadow-lg mt-1" style={{ fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                                                 made easy
                                             </p>
-                                            <p className="text-white text-base sm:text-lg md:text-xl font-medium tracking-wide drop-shadow-lg mt-2" style={{fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)'}}>
+                                            <p className="text-white text-base sm:text-lg md:text-xl font-medium tracking-wide drop-shadow-lg mt-2" style={{ fontFamily: "'Playfair Display', serif", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
                                                 with takeoff holidayz
                                             </p>
                                         </div>
@@ -708,19 +698,18 @@ const Home = () => {
                         </div>
 
                         {/* Right Section - Service Cards */}
-                        <div className={`lg:w-1/2 w-full transition-all duration-1000 ease-out delay-600 ${
-                            serviceBoxVisible 
-                                ? 'opacity-100 translate-x-0' 
-                                : 'opacity-0 translate-x-16'
-                        }`}>
+                        <div className={`lg:w-1/2 w-full transition-all duration-1000 ease-out delay-600 ${serviceBoxVisible
+                            ? 'opacity-100 translate-x-0'
+                            : 'opacity-0 translate-x-16'
+                            }`}>
                             <h3 className="text-3xl font-bold text-black mb-8 font-pethra sm:text-4xl md:text-5xl">Service Cards</h3>
                             <div className="w-44 h-1 bg-blue-600 mt-2 mb-8 w-24 sm:w-32 md:w-44"></div>
-                            
+
                             <div className="space-y-2 sm:space-y-6">
                                 {/* Service Card 1 */}
                                 <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                                     <div className="bg-blue-100 text-blue-600 rounded-full p-1 sm:p-3 group-hover:bg-blue-200 transition-colors duration-300">
-                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M12 5l7 7-7 7" /></svg>
                                     </div>
                                     <div className="flex-1">
                                         <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-blue-600 transition-colors duration-300">Flight Booking</h4>
@@ -731,7 +720,7 @@ const Home = () => {
                                 {/* Service Card 2 */}
                                 <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                                     <div className="bg-green-100 text-green-600 rounded-full p-1 sm:p-3 group-hover:bg-green-200 transition-colors duration-300">
-                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                     </div>
                                     <div className="flex-1">
                                         <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-green-600 transition-colors duration-300">Rail & Bus Tickets</h4>
@@ -742,7 +731,7 @@ const Home = () => {
                                 {/* Service Card 3 */}
                                 <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                                     <div className="bg-purple-100 text-purple-600 rounded-full p-1 sm:p-3 group-hover:bg-purple-200 transition-colors duration-300">
-                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h8m0 0v8m0-8l-8 8m8-8l8 8"/></svg>
+                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h8m0 0v8m0-8l-8 8m8-8l8 8" /></svg>
                                     </div>
                                     <div className="flex-1">
                                         <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-purple-600 transition-colors duration-300">Premium Transfers</h4>
@@ -753,7 +742,7 @@ const Home = () => {
                                 {/* Service Card 4 */}
                                 <div className="bg-white rounded-2xl shadow-md p-2 sm:p-6 flex items-center space-x-2 sm:space-x-4 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group">
                                     <div className="bg-orange-100 text-orange-600 rounded-full p-1 sm:p-3 group-hover:bg-orange-200 transition-colors duration-300">
-                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                                        <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                                     </div>
                                     <div className="flex-1">
                                         <h4 className="text-sm sm:text-xl font-semibold text-gray-800 mb-0.5 sm:mb-2 group-hover:text-orange-600 transition-colors duration-300">Hotel Reservations</h4>
@@ -761,19 +750,19 @@ const Home = () => {
                                     </div>
                                 </div>
 
+                            </div>
+
+                            <button
+                                className="bg-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 w-full lg:w-auto mt-8 sm:mt-12 shadow-lg hover:shadow-xl"
+                                style={{ fontFamily: "'Afacad', sans-serif" }}
+                                onClick={() => window.location.href = '/services'}
+                            >
+                                All Services....
+                            </button>
+
                         </div>
 
-                        <button 
-                            className="bg-blue-600 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 w-full lg:w-auto mt-8 sm:mt-12 shadow-lg hover:shadow-xl" 
-                            style={{fontFamily: "'Afacad', sans-serif"}}
-                            onClick={() => window.location.href = '/services'}
-                        >
-                                All Services....
-                        </button>
 
-                    </div>
-                        
-                        
                     </div>
                 </div>
             </section>
@@ -784,24 +773,23 @@ const Home = () => {
             {/* Customization Section */}
             <section id="customization-section" className="py-20 bg-white py-12 sm:py-16 md:py-20 overflow-x-hidden">
                 <div className="container mx-auto px-4 max-w-full lg:px-12 xl:px-44 max-w-screen-2xl mx-auto">
-                    <div className={`flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ease-out ${
-                        customizationVisible 
-                            ? 'opacity-100 translate-y-0' 
-                            : 'opacity-0 translate-y-32'
-                    }`}>
+                    <div className={`flex flex-col lg:flex-row items-center gap-8 sm:gap-10 md:gap-12 transition-all duration-1000 ease-out ${customizationVisible
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-32'
+                        }`}>
                         {/* Left Section - Content */}
                         <div className="lg:w-1/2 w-full">
-                            <p className="text-lg text-gray-500 mb-4 sm:mb-6" style={{fontFamily: "'Afacad', sans-serif"}}>Highlight</p>
+                            <p className="text-lg text-gray-500 mb-4 sm:mb-6" style={{ fontFamily: "'Afacad', sans-serif" }}>Highlight</p>
                             <h2 className="font-normal text-black mb-3 font-pethra text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">Every Journey, Perfectly Planned</h2>
                             <div className="w-64 h-1 bg-blue-600 mt-2 mb-8 sm:mb-10 md:mb-12 w-40 sm:w-40 md:w-48 lg:w-56 xl:w-64"></div>
-                            <p className="text-gray-600 mb-8 sm:mb-8 text-base sm:text-lg md:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            <p className="text-gray-600 mb-8 sm:mb-8 text-base sm:text-lg md:text-xl" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                 Whether it's a relaxing vacation or an adventurous getaway, we craft travel experiences tailored to you.
                             </p>
                             <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                                 <div className="flex items-center space-x-3">
                                     <div className="bg-blue-100 text-blue-600 rounded-full p-2">
                                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
                                     <p className="text-gray-700 text-sm sm:text-base">Personalized travel planning</p>
@@ -809,7 +797,7 @@ const Home = () => {
                                 <div className="flex items-center space-x-3">
                                     <div className="bg-blue-100 text-blue-600 rounded-full p-2">
                                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
                                     <p className="text-gray-700 text-sm sm:text-base">Flexible booking options</p>
@@ -817,15 +805,15 @@ const Home = () => {
                                 <div className="flex items-center space-x-3">
                                     <div className="bg-blue-100 text-blue-600 rounded-full p-2">
                                         <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </div>
                                     <p className="text-gray-700 text-sm sm:text-base">Expert travel consultation</p>
                                 </div>
                             </div>
-                            <button 
-                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl" 
-                                style={{fontFamily: "'Afacad', sans-serif"}}
+                            <button
+                                className="bg-blue-600 text-white px-8 py-4 text-lg sm:px-8 sm:py-3 sm:text-lg hover:bg-blue-700 hover:scale-105 transition-all duration-300 rounded-full shadow-lg hover:shadow-xl"
+                                style={{ fontFamily: "'Afacad', sans-serif" }}
                                 onClick={() => window.location.href = '/application'}
                             >
                                 Customize My Trip
@@ -835,7 +823,7 @@ const Home = () => {
                         {/* Right Section - Image */}
                         <div className="lg:w-1/2 w-full">
                             <div className="bg-white rounded-3xl shadow-lg overflow-hidden">
-                                <img src="/customize.jpg" alt="Customization" className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover" loading="lazy"/>
+                                <img src="/customize.jpg" alt="Customization" className="w-full h-64 sm:h-80 md:h-96 lg:h-[28rem] xl:h-[32rem] object-cover" loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -850,7 +838,7 @@ const Home = () => {
                 <div className="container mx-auto px-4 max-w-screen-2xl mx-auto">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 font-pethra">Our Trusted Partners</h2>
-                        <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto" style={{fontFamily: "'Afacad', sans-serif"}}>
+                        <p className="text-gray-600 text-lg sm:text-xl max-w-2xl mx-auto" style={{ fontFamily: "'Afacad', sans-serif" }}>
                             We collaborate with world-renowned travel brands and airlines to provide you with the best travel experiences.
                         </p>
                     </div>
@@ -881,9 +869,9 @@ const Home = () => {
                                 '/logo/215ad31e-dfd2-465d-ba3d-221973c1e6da.png'
                             ].map((logo, index) => (
                                 <div key={index} className="flex-shrink-0 h-20 w-40 bg-white rounded-lg shadow-md flex items-center justify-center p-3">
-                                    <img 
-                                        src={logo} 
-                                        alt={`Partner ${index + 1}`} 
+                                    <img
+                                        src={logo}
+                                        alt={`Partner ${index + 1}`}
                                         className="max-h-full max-w-full object-contain"
                                     />
                                 </div>
@@ -918,48 +906,45 @@ const Home = () => {
                 <div className="container mx-auto px-4 max-w-full lg:px-8 xl:px-12 max-w-screen-2xl mx-auto">
                     <div className="flex justify-center">
                         {/* Right Section - Content */}
-                        <div className={`lg:w-3/4 text-center w-full max-w-4xl transition-all duration-1000 ease-out ${
-                            adventureVisible 
-                                ? 'opacity-100 translate-y-0' 
-                                : 'opacity-0 translate-y-16'
-                        }`}>
+                        <div className={`lg:w-3/4 text-center w-full max-w-4xl transition-all duration-1000 ease-out ${adventureVisible
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-16'
+                            }`}>
                             <h2 className="text-6xl font-bold text-black mb-3 font-pethra text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center">Ready for Your Next Adventure?</h2>
                             <div className="w-44 h-1 bg-blue-600 mt-2 mb-6 sm:mb-8 md:mb-10 w-24 sm:w-32 md:w-40 lg:w-44 mx-auto"></div>
-                            <p className="text-gray-600 mb-8 sm:mb-10 md:mb-12 text-base sm:text-lg md:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>
+                            <p className="text-gray-600 mb-8 sm:mb-10 md:mb-12 text-base sm:text-lg md:text-xl" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                 Let our travel experts design your perfect holiday today.
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
                                 {/* Left Contact Box */}
-                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-300 ${
-                                    adventureVisible 
-                                        ? 'opacity-100 translate-x-0' 
-                                        : 'opacity-0 -translate-x-16'
-                                }`}>
+                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-300 ${adventureVisible
+                                    ? 'opacity-100 translate-x-0'
+                                    : 'opacity-0 -translate-x-16'
+                                    }`}>
                                     <h3 className="text-2xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-blue-600 transition-colors duration-300">Contact Us</h3>
-                                    <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                    <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                         Get expert advice for your next journey
                                     </p>
-                                    <button 
-                                        className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform" 
-                                        style={{fontFamily: "'Afacad', sans-serif"}}
+                                    <button
+                                        className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform"
+                                        style={{ fontFamily: "'Afacad', sans-serif" }}
                                         onClick={() => window.location.href = '/contact'}
                                     >
-                                       Click to Contact Us
+                                        Click to Contact Us
                                     </button>
                                 </div>
                                 {/* Right Contact Box */}
-                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-500 ${
-                                    adventureVisible 
-                                        ? 'opacity-100 translate-x-0' 
-                                        : 'opacity-0 translate-x-16'
-                                }`}>
+                                <div className={`bg-gray-50 rounded-2xl p-4 sm:p-6 text-center shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer group delay-500 ${adventureVisible
+                                    ? 'opacity-100 translate-x-0'
+                                    : 'opacity-0 translate-x-16'
+                                    }`}>
                                     <h3 className="text-3xl font-semibold text-gray-800 mb-4 font-pethra text-lg sm:text-xl md:text-2xl lg:text-3xl group-hover:text-green-600 transition-colors duration-300">Customise Trips and Clear the Doubts</h3>
-                                    <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{fontFamily: "'Afacad', sans-serif"}}>
+                                    <p className="text-gray-600 mb-4 text-sm sm:text-base" style={{ fontFamily: "'Afacad', sans-serif" }}>
                                         Start planning your dream vacation
                                     </p>
-                                    <button 
-                                        className="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-green-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform" 
-                                        style={{fontFamily: "'Afacad', sans-serif"}}
+                                    <button
+                                        className="bg-green-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-green-700 transition-all duration-300 text-sm sm:text-base group-hover:scale-110 transform"
+                                        style={{ fontFamily: "'Afacad', sans-serif" }}
                                         onClick={() => window.location.href = '/contact'}
                                     >
                                         Get Free Consultation

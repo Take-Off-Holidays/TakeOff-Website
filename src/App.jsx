@@ -16,6 +16,9 @@ import LoadingPage from './pages/LoadingPage'
 const AppContent = () => {
     const [loading, setLoading] = useState(false);
     const location = useLocation();
+    
+    // Initialize showSplash to true only if the user lands on the root path
+    const [showSplash, setShowSplash] = useState(location.pathname === '/');
 
     useEffect(() => {
         setLoading(true);
@@ -26,12 +29,9 @@ const AppContent = () => {
         return () => clearTimeout(timer);
     }, [location.pathname]);
 
-    // Check if on loading page
-    const isLoadingPage = location.pathname === '/';
-
-    // If on loading page, show only LoadingPage without Navbar or Footer
-    if (isLoadingPage) {
-        return <LoadingPage />;
+    // If we should show the splash screen on the root path
+    if (location.pathname === '/' && showSplash) {
+        return <LoadingPage onComplete={() => setShowSplash(false)} />;
     }
 
     return (
@@ -39,6 +39,7 @@ const AppContent = () => {
             {loading && <Loading />}
             <Navbar />
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />

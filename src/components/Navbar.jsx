@@ -11,7 +11,7 @@ const Navbar = () => {
           <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-2 sm:px-3 py-1.5 sm:py-2 shadow-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-all duration-300 self-start mt-1 sm:mt-1.5 md:mt-2"
                onClick={() => {
                  if (typeof window !== 'undefined') {
-                   window.location.href = '/home';
+                   window.location.href = '/';
                  }
                }}>
             <img src="/logoimg.png" alt="TakeOff Holidayz Logo - Premier Travel Agency" className="h-7 sm:h-8 md:h-8 lg:h-9 xl:h-10" />
@@ -20,7 +20,7 @@ const Navbar = () => {
           {/* Center - Desktop Navigation Links in glassmorphism box */}
           <div className="hidden md:flex bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-3 sm:px-4 md:px-6 lg:px-8 xl:px-10 py-2 sm:py-2.5 shadow-lg overflow-x-auto max-w-[100%] self-start mt-1 sm:mt-1.5 md:mt-2">
             <ul className="flex items-center space-x-3 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-8 whitespace-nowrap">
-              <li><Link to="/home" className="text-sm sm:text-base md:text-base lg:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
+              <li><Link to="/" className="text-sm sm:text-base md:text-base lg:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
                 Home
               </Link></li>
               <li><Link to="/services" className="text-sm sm:text-base md:text-base lg:text-lg text-black hover:text-blue-600 transition-colors duration-300 font-medium" style={{fontFamily: "'Afacad', sans-serif"}}>
@@ -81,7 +81,7 @@ const Navbar = () => {
             </div>
 
             <ul className="flex flex-col space-y-3 sm:space-y-4" role="menubar">
-              <li role="none"><Link to="/home" className="text-lg sm:text-xl text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2.5 px-4 rounded-lg hover:bg-white/10 block" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)} role="menuitem">
+              <li role="none"><Link to="/" className="text-lg sm:text-xl text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2.5 px-4 rounded-lg hover:bg-white/10 block" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)} role="menuitem">
                 Home
               </Link></li>
               <li role="none"><Link to="/services" className="text-lg sm:text-xl text-black hover:text-blue-600 transition-colors duration-300 font-medium py-2.5 px-4 rounded-lg hover:bg-white/10 block" style={{fontFamily: "'Afacad', sans-serif"}} onClick={() => setIsMenuOpen(false)} role="menuitem">
