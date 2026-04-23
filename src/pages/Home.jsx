@@ -288,8 +288,8 @@ const Home = () => {
                         mobileBoxesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                     }`} style={{transitionDelay: mobileBoxesVisible ? '0.5s' : '0s'}}>
                         <div className="bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 text-white w-64 sm:w-64 max-w-[85vw]">
-                            <p className="font-bold font-pethra text-xl sm:text-2xl text-center">Take Off Holidayz</p>
-                            <p className="font-bold font-pethra text-lg sm:text-xl text-center">TOH Pvt Ltd</p>
+                            <p className="font-bold font-futura text-xl sm:text-2xl text-center">TAKEOFF HOLIDAYZ</p>
+                            <p className="font-bold font-futura text-lg sm:text-xl text-center">PVT LTD</p>
                             <p className="text-sm sm:text-base text-center mt-1" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                         </div>
                     </div>

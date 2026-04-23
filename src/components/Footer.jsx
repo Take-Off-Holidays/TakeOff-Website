@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="mb-4">
               <img src="/logoimg.png" alt="Takeoff Holidayz - Premier Travel Agency Logo" className="h-12 w-auto mx-auto" />
             </div>
-            <h3 className="text-xl font-bold mb-1 font-pethra">TakeOff Holidayz Pvt Ltd<sup>™</sup></h3>
+            <h3 className="text-xl font-bold mb-1 font-pethra">TAKEOFF HOLIDAYZ</h3>
             <h3 className="text-lg font-bold mb-4 font-pethra">TOH Pvt Ltd<sup>™</sup></h3>
             <p className="text-gray-400 mb-4" style={{fontFamily: "'Afacad', sans-serif"}}>
               Your trusted partner for unforgettable travel experiences around the world.
