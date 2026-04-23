@@ -203,53 +203,53 @@ const Home = () => {
                 <link rel="canonical" href="https://takeoffholidayz.com/home" />
             </Helmet>
             {/* first section */}
-            <section className="relative w-full h-screen bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
+            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] bg-cover bg-center bg-no-repeat overflow-hidden" style={{backgroundImage: backgroundImageLoaded ? 'url(/Home.webp)' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}>
                 {/* Top 4 small glassmorphism boxes */}
-                <div id="glassmorphism-boxes" className="hidden md:block absolute left-0 right-0 px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 max-w-screen-2xl mx-auto">
-                    <div className="absolute top-[300px] md:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32">
+                <div id="glassmorphism-boxes" className="hidden lg:block absolute left-0 right-0 px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 max-w-screen-2xl mx-auto">
+                    <div className="absolute top-[280px] sm:top-[300px] md:top-[320px] lg:top-[350px] xl:top-[400px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 xl:gap-16">
                         {/* Box 1 - 10,000+ Happy Travelers Served (from left) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 mr-24 md:mr-32 lg:mr-40 xl:mr-64 transition-all duration-1000 ease-out ${
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 mr-16 sm:mr-20 md:mr-24 lg:mr-32 xl:mr-40 transition-all duration-1000 ease-out ${
                             boxesVisible 
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
+                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>10,000+</p>
+                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Happy Travelers Served</p>
                         </div>
                         {/* Box 2 - 15+ Global Destinations Covered (from right) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-300 ${
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-300 ${
                             boxesVisible 
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations Covered</p>
+                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>15+</p>
+                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Global Destinations</p>
                         </div>
                     </div>
-                    <div className="absolute top-[150px] md:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-8 md:gap-12 lg:gap-16 xl:gap-20 2xl:gap-24">
+                    <div className="absolute top-[140px] sm:top-[160px] md:top-[180px] lg:top-[200px] xl:top-[250px] left-0 right-0 flex justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
                         {/* Box 3 - 500+ Holiday Packages Delivered (from left) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-150 ${
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-150 ${
                             boxesVisible 
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 -translate-x-full'
                         }`}>
-                            <p className="text-3xl md:text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
-                            <p className="text-sm md:text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages Delivered</p>
+                            <p className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>500+</p>
+                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}>Holiday Packages</p>
                         </div>
                         {/* Box 4 - 19+ Years of Travel Excellence (from right) */}
-                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 text-white text-center w-48 md:w-56 lg:w-64 xl:w-80 transition-all duration-1000 ease-out delay-450 ${
+                        <div className={`bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-4 sm:p-5 md:p-6 text-white text-center w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 transition-all duration-1000 ease-out delay-450 ${
                             boxesVisible 
                                 ? 'opacity-100 translate-x-0' 
                                 : 'opacity-0 translate-x-full'
                         }`}>
-                            <p className="text-4xl xl:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
-                            <p className="text-base xl:text-lg" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Travel Excellence</p>
+                            <p className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold" style={{fontFamily: "'Abhaya Libre', serif", fontWeight: 800}}>19+</p>
+                            <p className="text-xs sm:text-sm md:text-sm lg:text-base" style={{fontFamily: "'Abhaya Libre', serif", }}> Years of Excellence</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Mobile-only horizontal carousel */}
-                <div className="md:hidden absolute left-0 right-0 px-2 sm:px-4">
+                <div className="lg:hidden absolute left-0 right-0 px-2 sm:px-3 md:px-4">
                     <div className="absolute top-[80px] sm:top-[100px] left-0 right-0 overflow-hidden">
                         <div className="flex transition-transform duration-500 ease-in-out will-change-transform" style={{ transform: `translateX(-${(currentIndex % 4) * 100}%)`, backfaceVisibility: 'hidden', perspective: 1000 }}>
                             {/* Box 1 */}
@@ -317,33 +317,33 @@ const Home = () => {
                 </div>
 
                 {/* Bottom left glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 left-8 md:left-10 lg:left-14 xl:left-20 2xl:left-28 mr-2 md:mr-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 md:p-4 lg:p-5 xl:p-6 text-white max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
+                <div className={`hidden lg:block absolute bottom-8 left-6 sm:left-8 md:left-10 lg:left-12 xl:left-16 2xl:left-20 mr-2 sm:mr-3 md:mr-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-2.5 sm:p-3 md:p-3.5 lg:p-4 xl:p-5 text-white max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl transition-all duration-1000 ease-out delay-600 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 -translate-x-full'
                 }`}>
                     <div className="text-center">
-                        <h1 className="font-pethra text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Take Off Holidayz</h1>
-                        <p className="font-pethra text-xl md:text-2xl lg:text-3xl xl:text-4xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
-                        <p className="text-xs md:text-sm lg:text-base xl:text-lg mt-1 md:mt-2" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
+                        <h1 className="font-pethra text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl">Take Off Holidayz</h1>
+                        <p className="font-pethra text-lg sm:text-xl md:text-xl lg:text-2xl xl:text-3xl" style={{fontFamily: "'Playfair Display', serif"}}>TOH Pvt Ltd</p>
+                        <p className="text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg mt-0.5 sm:mt-1" style={{fontFamily: "'Playfair Display', serif"}}>A complete travel partner</p>
                     </div>
                 </div>
 
-{/* Bottom right glassmorphism box */}
-                <div className={`hidden md:block absolute bottom-8 right-8 md:right-10 lg:right-14 xl:right-20 2xl:right-28 ml-2 md:ml-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-3 md:p-4 lg:p-5 xl:p-6 text-white max-w-xs md:max-w-sm lg:max-w-md xl:max-w-lg transition-all duration-1000 ease-out delay-750 ${
+                {/* Bottom right glassmorphism box */}
+                <div className={`hidden lg:block absolute bottom-8 right-6 sm:right-8 md:right-10 lg:right-12 xl:right-16 2xl:right-20 ml-2 sm:ml-3 md:ml-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-2.5 sm:p-3 md:p-3.5 lg:p-4 xl:p-5 text-white max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl transition-all duration-1000 ease-out delay-750 ${
                     boxesVisible 
                         ? 'opacity-100 translate-x-0' 
                         : 'opacity-0 translate-x-full'
                 }`}>
-                    <p className="mb-2 md:mb-3 lg:mb-4 text-sm md:text-base lg:text-lg xl:text-xl" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
-                    <div className="flex gap-2 md:gap-3 lg:gap-4">
+                    <p className="mb-1.5 sm:mb-2 md:mb-2.5 lg:mb-3 text-xs sm:text-sm md:text-base lg:text-base xl:text-lg" style={{fontFamily: "'Afacad', sans-serif"}}>Discover hassle-free travel with expert planning, exclusive packages, and unforgettable destinations.</p>
+                    <div className="flex gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3">
                         <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-3 md:px-4 lg:px-5 py-2 md:py-3 rounded-md transition-all text-xs md:text-sm lg:text-base" 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-2 sm:px-3 md:px-3.5 lg:px-4 py-1.5 sm:py-2 md:py-2.5 rounded-md transition-all text-xs sm:text-xs md:text-sm" 
                             style={{fontFamily: "'Afacad', sans-serif"}}
                             onClick={() => window.location.href = '/packages'}
                         >Explore Packages</button>
                         <button 
-                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-3 md:px-4 lg:px-5 py-2 md:py-3 rounded-md transition-all text-xs md:text-sm lg:text-base" 
+                            className="bg-white bg-opacity-30 hover:bg-opacity-40 px-2 sm:px-3 md:px-3.5 lg:px-4 py-1.5 sm:py-2 md:py-2.5 rounded-md transition-all text-xs sm:text-xs md:text-sm" 
                             style={{fontFamily: "'Afacad', sans-serif"}}
                             onClick={() => window.location.href = '/contact'}
                         >Plan Your Trip</button>
