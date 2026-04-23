@@ -1,20 +1,53 @@
-# React + Vite
+# 🚀 Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application built with React and Tailwind CSS, focused on performance, clean UI, and seamless user experience.
 
-Currently, two official plugins are available:
+## 🌐 Live Demo
+https://www.takeoffholidayz.in
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Repository
+🔗 https://github.com/TakeOff-Holidays/TakeOff-Website/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 About The Project
 
-## Expanding the ESLint configuration
+This project demonstrates my ability to build scalable, responsive, and visually polished frontend applications using modern technologies.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Take-off
-# Take-Off-Website
-# Take-off
-# Take-off
+The goal was to create a fast, accessible, and user-friendly interface with clean component structure and optimized performance.
+
+---
+
+## 🛠 Tech Stack
+
+- ⚛ React (Vite)
+- 🎨 Tailwind CSS
+- 🧠 JavaScript (ES6+)
+- 🌍 Responsive Design
+- 🔄 API Integration (if used)
+- 🎥 Animations (CSS / Framer Motion if used)
+
+---
+
+## ✨ Features
+
+- Fully responsive design (Mobile, Tablet, Desktop)
+- Clean and reusable component architecture
+- Smooth animations & transitions
+- Optimized performance
+- Modern UI/UX design principles
+- SEO-friendly structure
+
+---
+
+## 🧩 What I Focused On
+
+- Component reusability
+- Clean folder structure
+- Performance optimization
+- Accessibility best practices
+- UI consistency and spacing system
+
+---
+
+## 📁 Project Structure
